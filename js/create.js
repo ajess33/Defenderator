@@ -13,6 +13,23 @@ function handleForm(e){
     var proficiency = parseInt(e.target.proficiency.value);
     var average_damage = parseInt(e.target.average_damage.value);
     var notes = e.target.notes.value;
-    document.getElementById('createNewMonster');
-    var newMonster = MakeMonster(name,strength,dexterity,constitution,intelligence,wisdom,charisma,average_hp,speed,armor_class,proficiency,average_damage,notes)
+
+    var monster = {
+        name: name,
+        strength: strength,
+        dexterity: dexterity,
+        constitution: constitution,
+        intelligence: intelligence,
+        wisdom: wisdom,
+        charisma: charisma,
+        average_hp: average_hp,
+        speed: speed,
+        armor_class: armor_class,
+        proficiency: proficiency,
+        average_damage: average_damage,
+        notes: notes,
+    }
+
+    monsters[name] = monster;
 }
+document.getElementById('createNewMonster').addEventListener('submit', handleForm);
