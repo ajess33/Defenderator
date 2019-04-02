@@ -105,7 +105,6 @@ div input {
   display: block;
   float: left;
   clear: both;
-  color: white;
   width: 95%
 }
 
@@ -113,7 +112,6 @@ div textarea {
   display: block;
   float: left;
   clear: both;
-  color: white;
   width: 97.5%;
   height: 100px;
 }
