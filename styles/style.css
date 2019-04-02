@@ -43,7 +43,7 @@ table tr td {
   color: #DB001D;
 }
 
-footer {
+footer.index {
   color: white;
   position: fixed;
   left: 0;
@@ -69,4 +69,16 @@ section.acid button {
   color: #DB001D;
   border-radius: 25px;
   padding: 15px;
+}
+
+section.austin {
+  color: #DB001D;
+}
+
+section.skylar {
+  color: #DB001D;
+}
+
+section.alexander {
+  color: #DB001D;
 }
