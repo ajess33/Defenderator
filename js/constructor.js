@@ -129,13 +129,10 @@ function handleSubmit(e) {
   );
   newMonster.render();
   displayChart(newMonster);
+  populateOtherStats(newMonster);
 }
 
 function displayChart(monster) {
-  var canvasBaseStats = document
-    .getElementById('myChart-base')
-    .getContext('2d');
-
   var healthStat = monster.averagehp;
   var healthArray = [];
   healthArray.push(healthStat);
@@ -159,7 +156,7 @@ function displayChart(monster) {
     options: {
       legend: {
         labels: {
-          fontSize: 120
+          fontSize: 180
         }
       },
       scales: {
@@ -167,14 +164,14 @@ function displayChart(monster) {
           {
             ticks: {
               beginAtZero: true,
-              fontSize: 100
+              fontSize: 120
             }
           }
         ],
         xAxes: [
           {
             ticks: {
-              fontSize: 100
+              fontSize: 120
             }
           }
         ]
@@ -191,32 +188,16 @@ function displayChart(monster) {
     monster.charisma
   ];
 
-  console.log(baseStats);
-
   var baseLabels = ['Str', 'Dex', 'Con', 'Int', 'Wis', 'Cha'];
-
-  // var baseStatsChart = new Chart(canvasBaseStats, {
-  //   type: 'bar',
-
-  //   data: {
-  //     labels: baseLabels,
-  //     datasets: [
-  //       {
-  //         label: 'Base Stats',
-  //         data: [baseStats]
-  //       }
-  //     ]
-  //   }
-  // });
 
   var ctx2 = document.getElementById('myChart-base');
   var myBaseChart = new Chart(ctx2, {
-    type: 'bar',
+    type: 'radar',
     data: {
       labels: ['Str', 'Dex', 'Con', 'Int', 'Wis', 'Cha'],
       datasets: [
         {
-          label: '# of Votes',
+          label: 'Basic Stats',
           data: [
             monster.strength,
             monster.dexterity,
@@ -231,15 +212,67 @@ function displayChart(monster) {
       ]
     },
     options: {
+      scale: {
+        ticks: {
+          min: 0,
+          max: 20,
+          stepSize: 2,
+          fontSize: 25
+        }
+      },
+      legend: {
+        labels: {
+          fontSize: 50
+        }
+      },
       scales: {
         yAxes: [
           {
             ticks: {
-              beginAtZero: true
+              display: false
             }
           }
         ]
       }
     }
   });
+}
+
+function populateOtherStats(monster) {
+  var statsList = document.getElementById('other-atts');
+
+  var statLabels = [
+    'StrMod:',
+    'DexMod:',
+    'ConMod:',
+    'IntMod:',
+    'WisMod:',
+    'ChaMod:',
+    'Speed:',
+    'ArmorClass:',
+    'Notes:',
+    'HitBonus:',
+    'Proficiency:',
+    'AverageDamage:'
+  ];
+
+  var otherStats = [
+    monster.strMod,
+    monster.dexMod,
+    monster.conMod,
+    monster.intMod,
+    monster.wisMod,
+    monster.chaMod,
+    monster.speed,
+    monster.armorclass,
+    monster.notesAbout,
+    monster.hitbonus,
+    monster.proficiency,
+    monster.averagedamage
+  ];
+  for (var i = 0; i < otherStats.length; i++) {
+    var elLi = document.createElement('li');
+    elLi.textContent = statLabels[i] + ' ' + otherStats[i];
+    statsList.appendChild(elLi);
+  }
 }

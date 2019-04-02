@@ -1,12 +1,43 @@
-canvas {
+#myChart {
   width: 100px !important;
   height: 200px !important;
   color: #fff;
   font-size: 1.5rem;
-  padding: 30px;
+  margin-left: 50px;
+  /* padding: 30px; */
+  padding-bottom: 100px;
+}
+
+#myChart-base {
+  width: 500px !important;
+  height: 400px !important;
+  margin-left: 50px;
+}
+
+canvas {
+  display: inline-block !important;
+  padding: 20px;
 }
 
 #results-display {
   background: #fff;
-  margin: 200px auto;
+  margin: 150px 0 0 0;
+  padding-top: 30px;
+}
+
+.other-attributes {
+  width: 400px;
+  padding-bottom: 200px;
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.other-attributes h4 {
+  font-size: 1.3rem;
+  color: #a30a08;
+}
+
+.other-attributes li {
+  margin-top: 10px;
+  font-size: 0.9rem;
 }
