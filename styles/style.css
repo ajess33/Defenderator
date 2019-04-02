@@ -1,5 +1,9 @@
 @import 'reset.css';
 
+/* ===================== */
+/* INDEX PAGE */
+/* ===================== */
+
 body {
   font-family: 'Lato', 'sans-serif';
   margin: 0 auto;
@@ -11,17 +15,16 @@ body {
 
 nav ul li {
   display: inline-block;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 33%;
   text-align: center;
   padding: 10px 0px;
   font-size: 20px;
-  
 }
 
 a {
   text-decoration: none;
-  color: #A30A08;
+  color: #a30a08;
 }
 
 table {
@@ -34,13 +37,13 @@ table tr th {
   text-align: center;
   padding: 1px 5px;
   font-weight: bold;
-  color: #DB001D;
+  color: #db001d;
 }
 
 table tr td {
   text-align: center;
   font-size: 25px;
-  color: #DB001D;
+  color: #db001d;
 }
 
 footer.index {
@@ -66,21 +69,41 @@ section.acid button {
   margin-left: 42%;
   font-size: 22px;
   background-color: #303030;
-  color: #DB001D;
+  color: #db001d;
   border-radius: 25px;
   padding: 15px;
 }
 
+/* ===================== */
+/* DISPLAY PAGE */
+/* ===================== */
+
+main #create-enemy {
+  width: 400px;
+}
+
+main form label {
+  color: #fff;
+}
+
+main form .form-input {
+  display: block;
+}
+
+/* ===================== */
+/* ABOUT US */
+/* ===================== */
+
 section.austin {
-  color: #DB001D;
+  color: #db001d;
 }
 
 section.skylar {
-  color: #DB001D;
+  color: #db001d;
 }
 
 section.alexander {
-  color: #DB001D;
+  color: #db001d;
 }
 
 .us-container {
@@ -98,6 +121,7 @@ section.alexander {
 
 .alexander p {
   display: inline;
+}
 
 section.container {
   height: 49vh;
@@ -121,7 +145,7 @@ div input {
   display: block;
   float: left;
   clear: both;
-  width: 95%
+  width: 95%;
 }
 
 div textarea {
