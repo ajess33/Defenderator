@@ -2,8 +2,7 @@
 
 
 function MakeMonster (strength, dexterity, constitution, inteligence,
-  wisdom, charisma, averagehp, speed, armorclass, notesAbout,
-  hitbonus, proficiency, averagedamage) {
+  wisdom, charisma, averagehp, speed, armorclass, notesAbout, proficiency, averagedamage) {
 
   this.strength = strength;
   this.strMod = Math.floor((strength - 10)/2);
@@ -21,7 +20,7 @@ function MakeMonster (strength, dexterity, constitution, inteligence,
   this.speed = speed;
   this.armorclass = armorclass;
   this.notesAbout = notesAbout;
-  this.hitbonus = strMod + proficiency;
+  this.hitbonus = this.strMod + proficiency;
   this.proficiency = proficiency;
   this.averagedamage = averagedamage;
 }
@@ -67,8 +66,9 @@ MakeMonster.prototype.baseStatUp = function(){
 };
 
 MakeMonster.prototype.totalhealth = function (){
-  this.avghp + (this.avghp * .5 * increment) + (conMod * (increment + 1));
+  this.avghp + (this.avghp * .5 * increment) + (this.conMod * (increment + 1));
 };
+
 
 
 var elMonsterSelect = document.getElementById('monster-select');
