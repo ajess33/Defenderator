@@ -1,5 +1,7 @@
 'use strict';
 
+//monsters[whatevertheyenteredforname] = {}
+
 var monsters = {
 
   'Skeleton': {
