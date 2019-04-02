@@ -32,40 +32,40 @@ function MakeMonster(monsterType, name, increment) {
 // var increment = 1;
 
 MakeMonster.prototype.baseStatUp = function() {
-  if (this.increment >= 4) {
-    this.strength += 1;
-    this.dexterity += 1;
-    this.constitution += 1;
-    this.wisdom += 1;
-    this.charisma += 1;
-  }
-  if (this.increment >= 8) {
-    this.strength += 2;
-    this.dexterity += 2;
-    this.constitution += 2;
-    this.wisdom += 2;
-    this.charisma += 2;
-  }
-  if (this.increment >= 12) {
-    this.strength += 3;
-    this.dexterity += 3;
-    this.constitution += 3;
-    this.wisdom += 3;
-    this.charisma += 3;
-  }
-  if (this.increment >= 16) {
-    this.strength += 4;
-    this.dexterity += 4;
-    this.constitution += 4;
-    this.wisdom += 4;
-    this.charisma += 4;
-  }
   if (this.increment >= 20) {
     this.strength += 5;
     this.dexterity += 5;
     this.constitution += 5;
     this.wisdom += 5;
     this.charisma += 5;
+  }
+  else if (this.increment >= 16) {
+    this.strength += 4;
+    this.dexterity += 4;
+    this.constitution += 4;
+    this.wisdom += 4;
+    this.charisma += 4;
+  }
+  else if (this.increment >= 12) {
+    this.strength += 3;
+    this.dexterity += 3;
+    this.constitution += 3;
+    this.wisdom += 3;
+    this.charisma += 3;
+  }
+  else if (this.increment >= 8) {
+    this.strength += 2;
+    this.dexterity += 2;
+    this.constitution += 2;
+    this.wisdom += 2;
+    this.charisma += 2;
+  }
+  else if (this.increment >= 4) {
+    this.strength += 1;
+    this.dexterity += 1;
+    this.constitution += 1;
+    this.wisdom += 1;
+    this.charisma += 1;
   }
 };
 
