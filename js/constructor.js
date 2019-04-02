@@ -69,6 +69,15 @@ MakeMonster.prototype.baseStatUp = function() {
   }
 };
 
+MakeMonster.prototype.statModifiers = function() {
+  this.strMod = Math.floor((this.strength -10)/2);
+  this.dexMod = Math.floor((this.dexterity -10)/2);
+  this.conMod = Math.floor((this.constitution -10)/2);
+  this.intMod = Math.floor((this.inteligence -10)/2);
+  this.wisMod = Math.floor((this.wisdom - 10)/2);
+  this.chaMod = Math.floor((this.charisma -10)/2);
+};
+
 MakeMonster.prototype.totalHealth = function() {
   this.averagehp =
     this.averagehp +
@@ -100,6 +109,7 @@ MakeMonster.prototype.newArmorClass = function() {
 
 MakeMonster.prototype.render = function() {
   this.baseStatUp();
+  this.statModifiers();
   this.totalHealth();
   this.totaldamage();
   this.newProficiency();
