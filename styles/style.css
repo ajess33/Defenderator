@@ -82,3 +82,20 @@ section.skylar {
 section.alexander {
   color: #DB001D;
 }
+
+.us-container {
+  width: 80%;
+  margin: auto;
+}
+
+.austin-info {
+  width: 60%;
+}
+
+.skylar p {
+  display: inline;
+}
+
+.alexander p {
+  display: inline;
+}
