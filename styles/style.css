@@ -3,4 +3,50 @@
 body {
   font-family: 'Lato', 'sans-serif';
   margin: 0 auto;
+  background-image: url(../images/wall-for-project.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav ul li {
+  display: inline-block;
+  border: 1px solid black;
+  width: 33vw;
+  text-align: center;
+  padding: 10px 0px;
+  font-size: 20px;
+  
+}
+
+a {
+  text-decoration: none;
+  color: #A30A08;
+}
+
+table {
+  margin: 20px auto;
+}
+
+table tr th {
+  font-size: 100px;
+  text-align: center;
+  padding: 1px 5px;
+  font-weight: bold;
+  color: #DB001D;
+}
+
+table tr td {
+  text-align: center;
+  font-size: 25px;
+  color: #DB001D;
+}
+
+footer {
+  color: #DB001D;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 10px;
 }
