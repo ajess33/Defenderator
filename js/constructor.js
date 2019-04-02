@@ -69,10 +69,20 @@ MakeMonster.prototype.baseStatUp = function() {
   }
 };
 
-MakeMonster.prototype.totalhealth = function() {
-  this.avghp +
-    this.avghp * 0.5 * this.increment +
-    this.conMod * (this.increment + 1);
+MakeMonster.prototype.totalhealth = function () {
+  this.averagehp = this.averagehp + Math.ceil((this.averagehp * .5 * increment) + (this.conMod * (increment + 1)));
+};
+
+MakeMonster.prototype.totaldamage = function () {
+  this.averagedame = this.averagedamage + Math.ceil((this.averagedamage * .25 * increment) + (this.strMod * (increment +1)));
+};
+
+MakeMonster.prototype.newProficiency = function () {
+  this.proficiency = this.proficiency + Math.floor((this.proficiency * .25 * increment));
+};
+
+MakeMonster.prototype.newArmorClass = function () {
+  this.armorclass = this.armorclass + (this.dexMod *(increment+1)) + Math.floor((increment *.5));
 };
 
 var elName = document.getElementById('name-select');
