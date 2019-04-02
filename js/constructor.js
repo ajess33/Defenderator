@@ -73,7 +73,7 @@ MakeMonster.prototype.totalHealth = function() {
   this.averagehp =
     this.averagehp +
     Math.ceil(
-      this.averagehp * 0.5 * this.increment + this.conMod * (this.increment + 1)
+      (this.averagehp * 0.5 * this.increment) + (this.conMod * (this.increment + 1))
     );
 };
 
@@ -81,8 +81,8 @@ MakeMonster.prototype.totaldamage = function() {
   this.averagedamage =
     this.averagedamage +
     Math.ceil(
-      this.averagedamage * 0.25 * this.increment +
-        this.strMod * (this.increment + 1)
+      (this.averagedamage * 0.25 * this.increment) +
+        (this.strMod * (this.increment + 1))
     );
 };
 
@@ -94,7 +94,7 @@ MakeMonster.prototype.newProficiency = function() {
 MakeMonster.prototype.newArmorClass = function() {
   this.armorclass =
     this.armorclass +
-    this.dexMod * (this.increment + 1) +
+    this.dexMod +
     Math.floor(this.increment * 0.5);
 };
 
