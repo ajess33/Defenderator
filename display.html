@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Defenderator</title>
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/display.css" />
     <!-- DOES THIS NEED TO GO ON EACH HTML PAGE? -->
     <link
       href="https://fonts.googleapis.com/css?family=Lato:400,900"
@@ -67,11 +68,16 @@
 
         <input id="submit-form" type="submit" value="CREATE" />
       </form>
+
+      <section id="results-display">
+        <canvas id="monster-graph" height='400px' width="400px"></canvas>
+      </section>
     </main>
     <footer>
       <p>© Austin, Skylar, and Alexander | 2019</p>
     </footer>
     <script src="js/monsters.js"></script>
     <script src="js/constructor.js"></script>
+    <script src="js/display.js"></script>
   </body>
 </html>
