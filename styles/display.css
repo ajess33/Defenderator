@@ -1,0 +1,10 @@
+canvas {
+  width: 1000px !important;
+  height: 600px !important;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+#results-display {
+  background: black;
+}
