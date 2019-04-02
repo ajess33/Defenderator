@@ -1,6 +1,7 @@
 'use strict';
 
 var monsters = {
+
   'Skeleton': {
     'strength': 10,
     'dexterity': 14,
@@ -28,5 +29,6 @@ var monsters = {
     'proficiency' : 1,
     'averagedamage' : 3,
     'notesAbout' : 'Senses: Darkvision 60ft. Nimble Escape: The Goblin can take a Disengage or Hide action as a bonous action on each of its turns.',
-  }
+  },
+
 };
