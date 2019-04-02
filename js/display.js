@@ -1,3 +1,4 @@
 'use strict';
 
-console.log(MakeMonster.all);
+// console.log(MakeMonster.all);
+

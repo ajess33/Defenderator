@@ -99,13 +99,11 @@ MakeMonster.prototype.newArmorClass = function() {
 };
 
 MakeMonster.prototype.render = function() {
-  console.log(this);
   this.baseStatUp();
   this.totalHealth();
   this.totaldamage();
   this.newProficiency();
   this.newArmorClass();
-  console.log(this);
 };
 
 var elName = document.getElementById('name-select');
@@ -129,34 +127,119 @@ function handleSubmit(e) {
     monsterName,
     levelSelected
   );
-
   newMonster.render();
   displayChart(newMonster);
 }
 
 function displayChart(monster) {
-  var resultsWrapper = document.getElementById('results-display');
-  var canvas = document.getElementById('monster-graph').getContext('2d');
+  var canvasBaseStats = document
+    .getElementById('myChart-base')
+    .getContext('2d');
 
-  var labelsArray = Object.keys(monster);
-  labelsArray.splice(16, 1);
-  labelsArray.splice(0, 1);
-  var valuesArray = Object.values(monster);
-  valuesArray.splice(16, 1);
-  valuesArray.splice(0, 1);
+  var healthStat = monster.averagehp;
+  var healthArray = [];
+  healthArray.push(healthStat);
 
-  var healthChart = new Chart(canvas, {
+  Chart.defaults.global.defaultFontColor = '#a30a08';
+
+  var ctx = document.getElementById('myChart');
+  var myChart = new Chart(ctx, {
     type: 'bar',
-
     data: {
-      labels: 'Health',
+      labels: ['Health'],
       datasets: [
         {
           label: 'Total Health',
-          backgroundColor: '#a30a08',
-          data: valuesArray
+          data: [healthStat],
+          borderWidth: 1,
+          backgroundColor: 'red'
         }
       ]
+    },
+    options: {
+      legend: {
+        labels: {
+          fontSize: 120
+        }
+      },
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true,
+              fontSize: 100
+            }
+          }
+        ],
+        xAxes: [
+          {
+            ticks: {
+              fontSize: 100
+            }
+          }
+        ]
+      }
+    }
+  });
+
+  var baseStats = [
+    monster.strength,
+    monster.dexterity,
+    monster.constitution,
+    monster.inteligence,
+    monster.wisdom,
+    monster.charisma
+  ];
+
+  console.log(baseStats);
+
+  var baseLabels = ['Str', 'Dex', 'Con', 'Int', 'Wis', 'Cha'];
+
+  // var baseStatsChart = new Chart(canvasBaseStats, {
+  //   type: 'bar',
+
+  //   data: {
+  //     labels: baseLabels,
+  //     datasets: [
+  //       {
+  //         label: 'Base Stats',
+  //         data: [baseStats]
+  //       }
+  //     ]
+  //   }
+  // });
+
+  var ctx2 = document.getElementById('myChart-base');
+  var myBaseChart = new Chart(ctx2, {
+    type: 'bar',
+    data: {
+      labels: ['Str', 'Dex', 'Con', 'Int', 'Wis', 'Cha'],
+      datasets: [
+        {
+          label: '# of Votes',
+          data: [
+            monster.strength,
+            monster.dexterity,
+            monster.constitution,
+            monster.inteligence,
+            monster.wisdom,
+            monster.charisma
+          ],
+
+          borderWidth: 1
+        }
+      ]
+    },
+    options: {
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true
+            }
+          }
+        ]
+      }
     }
   });
 }
