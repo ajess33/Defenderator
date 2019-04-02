@@ -16,7 +16,7 @@ function MakeMonster(monsterType, name, increment) {
   this.wisMod = Math.floor((monsterType.wisdom - 10) / 2);
   this.charisma = monsterType.charisma;
   this.chaMod = Math.floor((monsterType.charisma - 10) / 2);
-  this.hitdie = monsterType.averagehp;
+  this.averagehp = monsterType.averagehp;
   this.speed = monsterType.speed;
   this.armorclass = monsterType.armorclass;
   this.notesAbout = monsterType.notesAbout;
