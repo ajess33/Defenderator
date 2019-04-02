@@ -11,8 +11,9 @@ var monsters = {
     'averagehp' : 9,
     'speed' : 30,
     'armorclass' : 13,
-    'notesAbout' : 'Damage Vulnerabilities: bludgeoning. Damage Immunities: poison. Condition Immunities: exhaustion, poisoned. Senses: darkvision 60ft.',
     'proficiency' : 1,
+    'averagedamage' : 3,
+    'notesAbout' : 'Damage Vulnerabilities: bludgeoning. Damage Immunities: poison. Condition Immunities: exhaustion, poisoned. Senses: darkvision 60ft.',
   },
   'Goblin' : {
     'strength': 8,
@@ -24,7 +25,8 @@ var monsters = {
     'averagehp' : 7,
     'speed' : 30,
     'armorclass' : 15,
-    'notesAbout' : 'Senses: Darkvision 60ft. Nimble Escape: The Goblin can take a Disengage or Hide action as a bonous action on each of its turns.',
     'proficiency' : 1,
+    'averagedamage' : 3,
+    'notesAbout' : 'Senses: Darkvision 60ft. Nimble Escape: The Goblin can take a Disengage or Hide action as a bonous action on each of its turns.',
   }
 };
