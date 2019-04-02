@@ -96,4 +96,28 @@ function handleSubmit(e) {
     monsterName,
     levelSelected
   );
+
+  displayChart(newMonster);
+}
+
+function displayChart(monster) {
+  var resultsWrapper = document.getElementById('results-display');
+  var canvas = document.getElementById('monster-graph').getContext('2d');
+
+  var labelsArray = Object.keys(monster);
+  var valuesArray = Object.values(monster);
+  console.log(labelsArray);
+  console.log(valuesArray);
+
+  // var chart = new Chart(canvas, {
+  //   type: 'bar',
+
+  //   data: {
+  //     labels: labelsArray,
+  //     datasets: {
+  //       label: 'Monster Stats',
+  //       data: valuesArray
+  //     }
+  //   }
+  // });
 }
