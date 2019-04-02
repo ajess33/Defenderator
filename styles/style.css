@@ -98,4 +98,40 @@ section.alexander {
 
 .alexander p {
   display: inline;
+
+section.container {
+  height: 49vh;
+}
+
+section.newMonster div {
+  display: inline-block;
+  width: 33%;
+}
+
+div label {
+  display: block;
+  float: left;
+  clear: both;
+  color: white;
+  padding-bottom: 5px;
+  padding-top: 10px;
+}
+
+div input {
+  display: block;
+  float: left;
+  clear: both;
+  width: 95%
+}
+
+div textarea {
+  display: block;
+  float: left;
+  clear: both;
+  width: 97.5%;
+  height: 100px;
+}
+
+section.newMonster div.notes {
+  width: 100%;
 }
