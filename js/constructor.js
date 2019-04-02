@@ -69,7 +69,7 @@ MakeMonster.prototype.baseStatUp = function() {
   }
 };
 
-MakeMonster.prototype.totalhealth = function() {
+MakeMonster.prototype.totalHealth = function() {
   this.averagehp =
     this.averagehp +
     Math.ceil(
@@ -78,7 +78,7 @@ MakeMonster.prototype.totalhealth = function() {
 };
 
 MakeMonster.prototype.totaldamage = function() {
-  this.averagedame =
+  this.averagedamage =
     this.averagedamage +
     Math.ceil(
       this.averagedamage * 0.25 * this.increment +
