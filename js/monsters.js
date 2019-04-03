@@ -1,7 +1,5 @@
 'use strict';
 
-//monsters[whatevertheyenteredforname] = {}
-
 var monsters = {
   'Skeleton': {
     'type' : 'Undead',
