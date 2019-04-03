@@ -1,6 +1,6 @@
 'use strict';
 
-MakeMonster.all = [];
+MakeMonster.all = {};
 
 function MakeMonster(monsterType, name, increment) {
   this.name = name;
@@ -24,6 +24,8 @@ function MakeMonster(monsterType, name, increment) {
   this.proficiency = monsterType.proficiency;
   this.averagedamage = monsterType.averagedamage;
   this.increment = parseInt(increment);
+  MakeMonster.all[this.name] =this;
+  localStorage.setItem('MakeMonster.all', JSON.stringify(MakeMonster.all));
 
   // push each new monster to an array
   monsters[this.name] = this;
