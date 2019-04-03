@@ -46,6 +46,9 @@ nav a:hover {
 table {
   margin: 20px auto;
   margin-bottom: 0px;
+  box-sizing: border-box;
+  padding-top: 50px;
+  
 }
 
 table tr th {
