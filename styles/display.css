@@ -1,6 +1,6 @@
 #myChart {
-  width: 100px !important;
-  height: 200px !important;
+  width: 200px !important;
+  height: 400px !important;
   color: #fff;
   font-size: 1.5rem;
   margin-left: 50px;
@@ -9,8 +9,8 @@
 }
 
 #myChart-base {
-  width: 500px !important;
-  height: 400px !important;
+  width: 700px !important;
+  height: 600px !important;
   margin-left: 50px;
 }
 
