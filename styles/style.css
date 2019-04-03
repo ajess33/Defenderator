@@ -95,7 +95,7 @@ section.alexander {
 }
 
 .column {
-  margin-top: 5%;
+  margin-top: 3%;
   float: left;
   width: 30%;
   padding: 10px;
@@ -103,6 +103,9 @@ section.alexander {
 .column img {
   margin-left: 15%;
   margin-bottom: 2%;
+  -webkit-box-shadow: 10px 10px 85px 3px rgba(219,0,29,1);
+  -moz-box-shadow: 10px 10px 85px 3px rgba(219,0,29,1);
+  box-shadow: 10px 10px 85px 3px rgba(219,0,29,1);
 }
 
 .column h2 {
