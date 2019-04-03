@@ -136,7 +136,6 @@ function handleSubmit(e) {
   addToSquad(newMonster);
   displayChart(newMonster);
   populateOtherStats(newMonster);
-  localStorage.setItem( 'MakeMonster.all', JSON.stringify(MakeMonster.all) );
   e.target.reset();
 }
 
