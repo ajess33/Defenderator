@@ -26,7 +26,7 @@ function MakeMonster(monsterType, name, increment) {
   this.increment = parseInt(increment);
 
   // push each new monster to an array
-  MakeMonster.all.push(this);
+  monsters[this.name] = this;
 }
 
 MakeMonster.prototype.baseStatUp = function () {
@@ -142,6 +142,7 @@ function handleSubmit(e) {
 // CHART STUFF
 
 function displayChart(monster) {
+  console.log(monster);
   var healthStat = monster.averagehp;
   var healthArray = [];
   healthArray.push(healthStat);
@@ -152,20 +153,20 @@ function displayChart(monster) {
   var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ['Health'],
+      // labels: ['Health'],
       datasets: [
         {
           label: 'Total Health',
           data: [healthStat],
           borderWidth: 1,
-          backgroundColor: 'red'
+          backgroundColor: '#db001d'
         }
       ]
     },
     options: {
       legend: {
         labels: {
-          fontSize: 180
+          fontSize: 130
         }
       },
       scales: {
@@ -173,14 +174,14 @@ function displayChart(monster) {
           {
             ticks: {
               beginAtZero: true,
-              fontSize: 120
+              fontSize: 80
             }
           }
         ],
         xAxes: [
           {
             ticks: {
-              fontSize: 120
+              fontSize: 80
             }
           }
         ]
@@ -207,6 +208,8 @@ function displayChart(monster) {
       datasets: [
         {
           label: 'Basic Stats',
+          fill: true,
+          backgroundColor: 'rgba(219, 0, 29, 0.1)',
           data: [
             monster.strength,
             monster.dexterity,
@@ -216,14 +219,17 @@ function displayChart(monster) {
             monster.charisma
           ],
           borderColor: [
-            'rgba(219, 0,29, 0.2)'
+            'rgba(219, 0, 29, 0.2)'
           ],
-          borderWidth: 3,
+          borderWidth: 5,
         }
       ]
     },
     options: {
       scale: {
+        pointLabels: {
+          fontSize: 50
+        },
         ticks: {
           min: 0,
           max: 20,
@@ -302,6 +308,32 @@ function populateOtherStats(monster) {
 function addToSquad(monster) {
   var elSquadList = document.getElementById('created-list');
   var newSquadMember = document.createElement('li');
-  newSquadMember.innerHTML = `${monster.name} - Adjustment: ${monster.increment} - <button>Show Stats</button>`;
+  newSquadMember.innerHTML = `${monster.name} - Adjustment: <span>${monster.increment}</span> <button class="selectMonster" data-type="show-created-stats" data-name="${monster.name}">Show Stats</button> - <button id="remove-monster">X</button>`;
   elSquadList.appendChild(newSquadMember);
+  var showButton = document.getElementsByClassName('selectMonster');
+  console.log(showButton);
+  for (var i = 0; i < showButton.length; i++) {
+    showButton[i].addEventListener('click', showCreatedStats);
+  }
+
 }
+
+
+//DOESNT WORK
+function showCreatedStats(e) {
+
+  console.log(monsters[e.target.getAttribute('data-name')]);
+  displayChart(monsters[e.target.getAttribute('data-name')]);
+  populateOtherStats(monsters[e.target.getAttribute('data-name')]);
+}
+
+// function removeMonster(e) {
+//   var elRemoveButton = document.getElementById('remove-monster');
+//   console.log(e);
+//   // for (var i = 0; i < Monsters.all.length; i++) {
+//   //   if ()
+//   // }
+// }
+
+
+

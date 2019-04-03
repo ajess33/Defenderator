@@ -28,8 +28,8 @@ nav ul li {
 nav a {
   text-decoration: none;
   color: #a30a08;
-  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 
-  0 0 20px #49ff18, 0 0 30px #49FF18, 
+  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF,
+  0 0 20px #49ff18, 0 0 30px #49FF18,
   0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
 }
 
@@ -48,7 +48,7 @@ table {
   margin-bottom: 0px;
   box-sizing: border-box;
   padding-top: 50px;
-  
+
 }
 
 table tr th {
@@ -102,13 +102,17 @@ main .display-wrapper {
 }
 
 main .display-wrapper .created-wrapper {
-  width: 400px;
+  width: 600px;
   margin: 50px auto !important;
 }
 
 main .display-wrapper .created-wrapper button {
-  margin-left: 80px;
+  /* margin-left: 150px; */
   /* float: right; */
+}
+
+main .display-wrapper .created-wrapper span {
+  margin-right: 250px;
 }
 
 main .display-wrapper .created-wrapper #created-list li {
