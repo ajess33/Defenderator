@@ -78,5 +78,9 @@ var monsters = {
 };
 
 function savedMonsters() {
-  if(localStorage['newMonster'])
+  if(localStorage['newMonster']) {
+    monsters = JSON.parse(localStorage['newMonster']);
+  }
 }
+
+savedMonsters();
