@@ -29,8 +29,6 @@ function MakeMonster(monsterType, name, increment) {
   MakeMonster.all.push(this);
 }
 
-// var increment = 1;
-
 MakeMonster.prototype.baseStatUp = function() {
   if (this.increment >= 20) {
     this.strength += 5;
