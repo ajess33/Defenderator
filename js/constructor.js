@@ -24,11 +24,10 @@ function MakeMonster(monsterType, name, increment) {
   this.proficiency = monsterType.proficiency;
   this.averagedamage = monsterType.averagedamage;
   this.increment = parseInt(increment);
-  MakeMonster.all[this.name] =this;
+  MakeMonster.all[this.name] = this;
   localStorage.setItem('MakeMonster.all', JSON.stringify(MakeMonster.all));
 
   // push each new monster to an array
-  MakeMonster.all.push(this);
 
   monsters[this.name] = this;
 }
@@ -330,8 +329,8 @@ function addToSquad(monster) {
 }
 
 function showCreatedStats(e) {
-  displayChart(monsters[e.target.getAttribute('data-name')]);
-  populateOtherStats(monsters[e.target.getAttribute('data-name')]);
+  displayChart(MakeMonsters.all[e.target.getAttribute('data-name')]);
+  populateOtherStats(MakeMonsters.all[e.target.getAttribute('data-name')]);
 }
 
 function removeMonster(e) {
