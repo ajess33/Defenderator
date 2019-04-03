@@ -93,11 +93,104 @@ section.acid button {
   padding: 15px;
 }
 
+.create-button {
+  float: right;
+}
+
+
+
 /* ===================== */
 /* DISPLAY PAGE */
 /* ===================== */
 
+
+
+main .form-wrapper {
+  max-width: 800px;
+  margin: 80px auto 200px auto;
+  overflow: hidden;
+}
+
+main h2 {
+  color: #db001d;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 70px;
+}
+
+main .form-wrapper label {
+  font-size: 1.5rem;
+}
+
+main .form-wrapper input {
+  margin-left: 75px;
+  height: 30px;
+  width: 200px;
+  border-radius: 5px;
+}
+
+main .form-wrapper select {
+  height: 30px;
+  width: 200px;
+  margin-left: 20px;
+}
+
+main #submit-form {
+  height: 30px;
+  border-radius: 5px;
+  margin: 0 auto;
+  text-align: center;
+  cursor: pointer;
+  width: 85%;
+  /* padding: 20px 10px; */
+}
+
+main #submit-form:hover {
+  background: #fff;
+  border: 1px solid #db001d;
+  color: #db001d;
+}
+
+main p.form-banner {
+  color: #00FF03;
+  float: right;
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 80px 200px 0 0;
+}
+
+main .create-button, main a {
+  float: right;
+  border-radius: 5px;
+  background: #db001d;
+  text-decoration: none;
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  cursor: pointer;
+  margin-top: -130px;
+  margin-left: 40px;
+  padding: 15px 15px;
+}
+
+/* main a {
+  color: #fff;
+} */
+
+main input#submit-form, main p.create-button {
+  background: #db001d;
+  color: #fff;
+  border: none;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+}
+
 main .display-wrapper {
+  background: #fff;
+}
+
+canvas {
   background: #999;
 }
 
@@ -107,7 +200,7 @@ main .display-wrapper .created-wrapper {
 }
 
 main .display-wrapper .created-wrapper button {
-  float: right;
+  /* float: right; */
   margin: 0 10px;
 }
 
@@ -123,11 +216,17 @@ main .display-wrapper .created-wrapper h3 {
   margin-top: 50px;
   text-align: center;
   padding-top: 50px;
+  font-size: 2rem;
+}
+
+input:focus {
+  outline: none;
+  border: 5px solid #00FF03;
 }
 
 main #create-enemy {
-  width: 400px;
-  margin: 150px auto 30px auto;
+  width: 500px;
+  display: inline-block;
 }
 
 main form label {

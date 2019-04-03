@@ -19,7 +19,7 @@
     <nav>
       <ul>
         <li><a href="index.html">HOME</a></li>
-        <li><a href="display.html">DISPLAY</a></li>
+        <li><a href="display.html">CREATE</a></li>
         <li><a href="about.html">ABOUT US</a></li>
       </ul>
     </nav>
@@ -27,49 +27,55 @@
   </header>
 
   <main>
-    <form target="_blank" action="display.html" id="create-enemy">
-      <section class="form-input">
-        <label for"name-select">Enter Name:<span class="required">*</span></label>
-        <input type="text" required id="name-select">
-      </section>
-      <section class="form-input">
-        <label for="monster-select">Pick Your Monster:</label>
-        <select id="monster-select">
-        </select>
-      </section>
-      <section class="form-input">
+    <h2>Generate Monster or Create A New One</h2>
+    <section class="form-wrapper">
 
-        <label for="level-select">Select Level (0-20):</label>
-        <select id="level-select">
-          <option value="0">0</option>
+      <form target="_blank" action="display.html" id="create-enemy">
+        <section class="form-input">
+          <label for"name-select">Enter Name:<span class="required">*</span></label>
+          <input type="text" required id="name-select">
+        </section>
+        <section class="form-input">
+          <label for="monster-select">Pick Your Monster:</label>
+          <select id="monster-select">
+          </select>
+        </section>
+        <section class="form-input">
 
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-          <option value="11">11</option>
-          <option value="12">12</option>
-          <option value="13">13</option>
-          <option value="14">14</option>
-          <option value="15">15</option>
-          <option value="16">16</option>
-          <option value="17">17</option>
-          <option value="18">18</option>
-          <option value="19">19</option>
-          <option value="20">20</option>
-        </select>
-      </section>
+          <label for="level-select">Select Level (0-20):</label>
+          <select id="level-select">
+            <option value="0">0</option>
 
-      <input id="submit-form" type="submit" value="GENERATE" />
-    </form>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+          </select>
+        </section>
 
-    <button><a href="create.html">Create Your Own!</a></button>
+        <input id="submit-form" type="submit" value="GENERATE" />
+      </form>
+
+      <p class="form-banner">OR</p>
+
+      <a href="create.html" class="create-button">Create Your Own!</a>
+    </section>
 
     <section class="display-wrapper">
       <section class="created-wrapper">
