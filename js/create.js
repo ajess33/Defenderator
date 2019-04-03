@@ -31,9 +31,11 @@ function handleForm(e) {
     type: type,
     notes: notes
   };
-  localStorage
-
+  console.log('I am running');
   monsters[name] = monster;
+  localStorage.setItem('newMonster', JSON.stringify(monsters));
+  window.location.href = '../display.html';
 }
-document
-  .getElementById('createNewMonster').addEventListener('submit', handleForm);
+document.getElementById('createNewMonster').addEventListener('submit', handleForm);
+
+console.log(document.getElementById('createNewMonster'));

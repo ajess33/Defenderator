@@ -76,3 +76,7 @@ var monsters = {
   }
 
 };
+
+function savedMonsters() {
+  if(localStorage['newMonster'])
+}
