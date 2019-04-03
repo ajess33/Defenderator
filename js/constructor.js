@@ -29,8 +29,6 @@ function MakeMonster(monsterType, name, increment) {
   MakeMonster.all.push(this);
 }
 
-// var increment = 1;
-
 MakeMonster.prototype.baseStatUp = function () {
   if (this.increment >= 20) {
     this.strength += 5;
@@ -78,7 +76,7 @@ MakeMonster.prototype.totalHealth = function () {
   this.averagehp =
     this.averagehp +
     Math.ceil(
-      this.averagehp * 0.5 * this.increment + this.conMod * (this.increment + 1)
+      (this.averagehp * 0.5 * this.increment) + (this.conMod * (this.increment + 1))
     );
 };
 
@@ -86,8 +84,8 @@ MakeMonster.prototype.totaldamage = function () {
   this.averagedamage =
     this.averagedamage +
     Math.ceil(
-      this.averagedamage * 0.25 * this.increment +
-      this.strMod * (this.increment + 1)
+      (this.averagedamage * 0.25 * this.increment) +
+      this.strMod + (this.increment + 1)
     );
 };
 
