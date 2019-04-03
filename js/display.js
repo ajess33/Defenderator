@@ -31,12 +31,15 @@ function handleSubmit(e) {
   displayChart(newMonster);
   populateOtherStats(newMonster);
   e.target.reset();
+
 }
 
 // CHART STUFF
 
 function displayChart(monster) {
-  console.log(monster);
+  var displaySection = document.getElementById('results-display');
+
+  displaySection.classList.remove('ghost');
   var healthStat = monster.averagehp;
   var healthArray = [];
   healthArray.push(healthStat);
@@ -92,13 +95,13 @@ function displayChart(monster) {
     monster.charisma
   ];
 
-  var baseLabels = ['Str', 'Dex', 'Con', 'Int', 'Wis', 'Cha'];
+  // var baseLabels = ['Str', 'Dex', 'Con', 'Int', 'Wis', 'Cha'];
 
   var ctx2 = document.getElementById('myChart-base');
   var myBaseChart = new Chart(ctx2, {
     type: 'radar',
     data: {
-      labels: ['Str', 'Dex', 'Con', 'Int', 'Wis', 'Cha'],
+      labels: ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA'],
       datasets: [
         {
           label: 'Basic Stats',
@@ -226,10 +229,16 @@ function showCreatedStats(e) {
 
 function removeMonster(e) {
   var removedMonster = e.target.getAttribute('data-name');
-  console.log(removedMonster);
+  var displaySection = document.getElementById('results-display');
+  displaySection.classList.add('ghost');
+  // console.log(removedMonster);
   var elSquadList = document.getElementById('created-list');
   var elToRemove = document.querySelector(`[data-name=${removedMonster}]`);
   var listItem = elToRemove.parentNode;
   elSquadList.removeChild(listItem);
+
+  // console.log(MakeMonster.all['austin']);
+
+  // console.log(MakeMonster.all[removedMonster]);
 }
 
