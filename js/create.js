@@ -35,7 +35,7 @@ function handleForm(e) {
   monsters[name] = monster;
   localStorage.setItem('newMonster', JSON.stringify(monsters));
   e.target.reset();
-  window.location.href = '../display.html';
+  window.location.href = 'display.html';
 }
 document.getElementById('createNewMonster').addEventListener('submit', handleForm);
 
