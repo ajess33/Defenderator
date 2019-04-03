@@ -219,7 +219,7 @@ function displayChart(monster) {
           borderColor: [
             'rgba(219, 0,29, 0.2)'
           ],
-          borderWidth: 2
+          borderWidth: 3,
         }
       ]
     },
