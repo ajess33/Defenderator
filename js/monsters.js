@@ -5,6 +5,7 @@
 var monsters = {
 
   'Skeleton': {
+    'type' : 'Undead',
     'strength': 10,
     'dexterity': 14,
     'constitution': 15,
@@ -19,6 +20,7 @@ var monsters = {
     'notesAbout' : 'Damage Vulnerabilities: bludgeoning. Damage Immunities: poison. Condition Immunities: exhaustion, poisoned. Senses: darkvision 60ft.',
   },
   'Goblin' : {
+    'type' : 'Humanoid (Goblinoid)',
     'strength': 8,
     'dexterity': 14,
     'constitution': 10,
@@ -33,6 +35,7 @@ var monsters = {
     'notesAbout' : 'Senses: Darkvision 60ft. Nimble Escape: The Goblin can take a Disengage or Hide action as a bonous action on each of its turns.',
   },
   'Animated Armor' : {
+    'type' : 'Construct',
     'strength': 14,
     'dexterity': 11,
     'constitution': 13,
@@ -47,6 +50,7 @@ var monsters = {
     'notesAbout' : 'Damage Immunities: poison, psychic. Condition Immunitites: blinded, charmed, deafened, exhaustion, frightened, paralyzed, petrified, poisoned. Senses: Blindsight 60ft (blind beyond radius). Antimagic Suseptibility: The armor is incapacitated while in the area of an antimagic field. If targeted by dispel magic, the armor must succeed on a Constitution saving throw against the caster\'s spell save DC or fall unconscious for 1 minute. False Appearance. While the armor remains motionless, it is indistinguishable from a normal suit of armor.'
   },
   'Orc' : {
+    'type' : 'Humanoid (orc)'
     'strength': 16,
     'dexterity': 12,
     'constitution': 16,
@@ -61,6 +65,7 @@ var monsters = {
     'notesAbout' : 'Senses: Darkvision 60ft. Aggressive. As a bonus action, the orc can move up to its speed toward a hostile creature that it can see'
   },
   'Dire Wolf' : {
+    'type' : 'Beast',
     'strength': 17,
     'dexterity': 15,
     'constitution': 13,
