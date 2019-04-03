@@ -3,14 +3,13 @@
 var userMonsters = {};
 
 function loadUserMonsters(){
-    if(localStorage['newMonster']){
-        monsters = JSON.parse(localStorage['newMonster'])
-    }
-  
-};
+  if(localStorage['newMonster']){
+    monsters = JSON.parse(localStorage['newMonster']);
+  }
+
+}
 
 function populateDropdown() {
-  console.log('i am running');
   var userMonsterNames = Object.keys(monsters);
   for(var i = 0; i < userMonsterNames.length; i++) {
     var newOption = document.createElement('option');
