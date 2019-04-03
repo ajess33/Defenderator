@@ -1,11 +1,11 @@
 'use strict';
 
 function loadUserMonsters(){
-    if(localStorage['newMonster']){
-        monsters = JSON.parse(localStorage['newMonster'])
-    }
-  
-};
+  if(localStorage['newMonster']){
+    monsters = JSON.parse(localStorage['newMonster']);
+  }
+
+}
 
 function populateDropdown() {
   console.log('i am running');
