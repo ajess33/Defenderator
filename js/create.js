@@ -32,8 +32,8 @@ function handleForm(e) {
     type: type,
     notes: notes
   };
-  userMonsters[monster.name] = monster;
-  localStorage.setItem('newMonster', JSON.stringify(userMonsters));
+  monsters[monster.name] = monster;
+  localStorage.setItem('newMonster', JSON.stringify(monsters));
   e.target.reset();
   window.location.href = 'display.html';
 }
