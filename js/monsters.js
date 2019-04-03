@@ -3,7 +3,6 @@
 //monsters[whatevertheyenteredforname] = {}
 
 var monsters = {
-
   'Skeleton': {
     'type' : 'Undead',
     'strength': 10,
