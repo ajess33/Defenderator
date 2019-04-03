@@ -1,79 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Defenderator</title>
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="styles/display.css" />
-    <!-- DOES THIS NEED TO GO ON EACH HTML PAGE? -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:400,900"
-      rel="stylesheet"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-  </head>
-  <body>
-    <header>
-      <h1>Defenderator</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">HOME</a></li>
-          <li><a href="display.html">DISPLAY</a></li>
-          <li><a href="about.html">ABOUT US</a></li>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Defenderator</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/display.css" />
+  <!-- DOES THIS NEED TO GO ON EACH HTML PAGE? -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Defenderator</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="display.html">DISPLAY</a></li>
+        <li><a href="about.html">ABOUT US</a></li>
+      </ul>
+    </nav>
+    <!-- LOGO -->
+  </header>
+
+  <main>
+    <form target="_blank" action="display.html" id="create-enemy">
+      <section class="form-input">
+        <label for"name-select">Enter Name:</label>
+        <input type="text" id="name-select">
+      </section>
+      <section class="form-input">
+        <label for="monster-select">Pick Your Monster:</label>
+        <select id="monster-select">
+          <option value="Skeleton">Skeleton</option>
+          <option value="Goblin">Goblin</option>
+          <option value="Animated Armor">Animated Armor</option>
+          <option value="Orc">Orc</option>
+          <option value="Dire Wolf">Dire Wolf</option>
+        </select>
+      </section>
+      <section class="form-input">
+
+        <label for="level-select">Select Level (0-20):</label>
+        <select id="level-select">
+          <option value="0">0</option>
+
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+        </select>
+      </section>
+
+      <input id="submit-form" type="submit" value="CREATE" />
+    </form>
+
+    <section class="display-wrapper">
+      <section class="created-wrapper">
+        <h3>Created Monsters</h3>
+        <ul id="created-list">
         </ul>
-      </nav>
-      <!-- LOGO -->
-    </header>
-
-    <main>
-      <form target="_blank" action="display.html" id="create-enemy">
-        <section class="form-input">
-          <label for"name-select">Enter Name:</label>
-          <input type="text" id="name-select">
-        </section>
-        <section class="form-input">
-          <label for="monster-select">Pick Your Monster:</label>
-          <select id="monster-select">
-            <option value="Skeleton">Skeleton</option>
-            <option value="Goblin">Goblin</option>
-            <option value="Animated Armor">Animated Armor</option>
-            <option value="Orc">Orc</option>
-            <option value="Dire Wolf">Dire Wolf</option>
-          </select>
-        </section>
-        <section class="form-input">
-
-          <label for="level-select">Select Level (0-20):</label>
-          <select id="level-select">
-            <option value="0">0</option>
-
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-            <option value="13">13</option>
-            <option value="14">14</option>
-            <option value="15">15</option>
-            <option value="16">16</option>
-            <option value="17">17</option>
-            <option value="18">18</option>
-            <option value="19">19</option>
-            <option value="20">20</option>
-          </select>
-        </section>
-
-        <input id="submit-form" type="submit" value="CREATE" />
-      </form>
+      </section>
 
       <section id="results-display">
         <canvas id="myChart" height='200px' width="100px"></canvas>
@@ -84,12 +90,14 @@
           </ul>
         </section>
       </section>
-    </main>
-    <footer>
-      <p>© Austin, Skylar, and Alexander | 2019</p>
-    </footer>
-    <script src="js/monsters.js"></script>
-    <script src="js/constructor.js"></script>
-    <script src="js/display.js"></script>
-  </body>
+    </section>
+  </main>
+  <footer>
+    <p>© Austin, Skylar, and Alexander | 2019</p>
+  </footer>
+  <script src="js/monsters.js"></script>
+  <script src="js/constructor.js"></script>
+  <script src="js/display.js"></script>
+</body>
+
 </html>

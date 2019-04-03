@@ -31,7 +31,7 @@ function MakeMonster(monsterType, name, increment) {
 
 // var increment = 1;
 
-MakeMonster.prototype.baseStatUp = function() {
+MakeMonster.prototype.baseStatUp = function () {
   if (this.increment >= 20) {
     this.strength += 5;
     this.dexterity += 5;
@@ -65,7 +65,7 @@ MakeMonster.prototype.baseStatUp = function() {
   }
 };
 
-MakeMonster.prototype.statModifiers = function() {
+MakeMonster.prototype.statModifiers = function () {
   this.strMod = Math.floor((this.strength - 10) / 2);
   this.dexMod = Math.floor((this.dexterity - 10) / 2);
   this.conMod = Math.floor((this.constitution - 10) / 2);
@@ -74,7 +74,7 @@ MakeMonster.prototype.statModifiers = function() {
   this.chaMod = Math.floor((this.charisma - 10) / 2);
 };
 
-MakeMonster.prototype.totalHealth = function() {
+MakeMonster.prototype.totalHealth = function () {
   this.averagehp =
     this.averagehp +
     Math.ceil(
@@ -82,26 +82,26 @@ MakeMonster.prototype.totalHealth = function() {
     );
 };
 
-MakeMonster.prototype.totaldamage = function() {
+MakeMonster.prototype.totaldamage = function () {
   this.averagedamage =
     this.averagedamage +
     Math.ceil(
       this.averagedamage * 0.25 * this.increment +
-        this.strMod * (this.increment + 1)
+      this.strMod * (this.increment + 1)
     );
 };
 
-MakeMonster.prototype.newProficiency = function() {
+MakeMonster.prototype.newProficiency = function () {
   this.proficiency =
     this.proficiency + Math.floor(this.proficiency * 0.25 * this.increment);
 };
 
-MakeMonster.prototype.newArmorClass = function() {
+MakeMonster.prototype.newArmorClass = function () {
   this.armorclass =
     this.armorclass + this.dexMod + Math.floor(this.increment * 0.5);
 };
 
-MakeMonster.prototype.render = function() {
+MakeMonster.prototype.render = function () {
   this.baseStatUp();
   this.statModifiers();
   this.totalHealth();
@@ -121,6 +121,9 @@ elCreateForm.addEventListener('submit', handleSubmit);
 
 function handleSubmit(e) {
   e.preventDefault();
+
+  // clear the form!
+
   var monsterName = elName.value;
   var monsterSelected =
     elMonsterSelect.options[elMonsterSelect.selectedIndex].value;
@@ -132,9 +135,12 @@ function handleSubmit(e) {
     levelSelected
   );
   newMonster.render();
+  addToSquad(newMonster);
   displayChart(newMonster);
   populateOtherStats(newMonster);
 }
+
+// CHART STUFF
 
 function displayChart(monster) {
   var healthStat = monster.averagehp;
@@ -285,5 +291,16 @@ function populateOtherStats(monster) {
     var elLi = document.createElement('li');
     elLi.textContent = statLabels[i] + ' ' + otherStats[i];
     statsList.appendChild(elLi);
+
   }
+}
+
+
+// CREATED LIST STUFF
+
+function addToSquad(monster) {
+  var elSquadList = document.getElementById('created-list');
+  var newSquadMember = document.createElement('li');
+  newSquadMember.innerHTML = `${monster.name} - Adjustment: ${monster.increment} - <button>Show Stats</button>`;
+  elSquadList.appendChild(newSquadMember);
 }
