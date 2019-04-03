@@ -97,8 +97,37 @@ section.acid button {
 /* DISPLAY PAGE */
 /* ===================== */
 
+main .display-wrapper {
+  background: #999;
+}
+
+main .display-wrapper .created-wrapper {
+  width: 400px;
+  margin: 50px auto !important;
+}
+
+main .display-wrapper .created-wrapper button {
+  margin-left: 80px;
+  /* float: right; */
+}
+
+main .display-wrapper .created-wrapper #created-list li {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 20px 30px;
+  margin-top: 10px;
+}
+
+main .display-wrapper .created-wrapper h3 {
+  color: #a30a08;
+  margin-top: 50px;
+  text-align: center;
+  padding-top: 50px;
+}
+
 main #create-enemy {
   width: 400px;
+  margin: 150px auto 30px auto;
 }
 
 main form label {
@@ -107,6 +136,11 @@ main form label {
 
 main form .form-input {
   display: block;
+  margin: 20px 0;
+}
+
+.ghost {
+  display: none;
 }
 
 /* ===================== */
