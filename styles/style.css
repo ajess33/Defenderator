@@ -143,6 +143,11 @@ main form .form-input {
   display: none;
 }
 
+.required {
+  color: red;
+  font-size: 1.5rem;
+}
+
 /* ===================== */
 /* ABOUT US */
 /* ===================== */
