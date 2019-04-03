@@ -1,5 +1,7 @@
 'use strict';
 
+var userMonsters = {};
+
 function loadUserMonsters(){
   if(localStorage['newMonster']){
     monsters = JSON.parse(localStorage['newMonster']);
