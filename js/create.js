@@ -5,7 +5,7 @@ function handleForm(e) {
   var strength = parseInt(e.target.strength.value);
   var dexterity = parseInt(e.target.dexterity.value);
   var constitution = parseInt(e.target.constitution.value);
-  var intelligence = parseInt(e.target.intelligence.value);
+  var inteligence = parseInt(e.target.inteligence.value);
   var wisdom = parseInt(e.target.wisdom.value);
   var charisma = parseInt(e.target.charisma.value);
   var average_hp = parseInt(e.target.average_hp.value);
@@ -21,7 +21,7 @@ function handleForm(e) {
     strength: strength,
     dexterity: dexterity,
     constitution: constitution,
-    intelligence: intelligence,
+    inteligence: inteligence,
     wisdom: wisdom,
     charisma: charisma,
     average_hp: average_hp,
