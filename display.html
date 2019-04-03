@@ -29,17 +29,12 @@
   <main>
     <form target="_blank" action="display.html" id="create-enemy">
       <section class="form-input">
-        <label for"name-select">Enter Name:</label>
-        <input type="text" id="name-select">
+        <label for"name-select">Enter Name:<span class="required">*</span></label>
+        <input type="text" required id="name-select">
       </section>
       <section class="form-input">
         <label for="monster-select">Pick Your Monster:</label>
         <select id="monster-select">
-          <option value="Skeleton">Skeleton</option>
-          <option value="Goblin">Goblin</option>
-          <option value="Animated Armor">Animated Armor</option>
-          <option value="Orc">Orc</option>
-          <option value="Dire Wolf">Dire Wolf</option>
         </select>
       </section>
       <section class="form-input">
@@ -71,7 +66,7 @@
         </select>
       </section>
 
-      <input id="submit-form" type="submit" value="CREATE" />
+      <input id="submit-form" type="submit" value="GENERATE" />
     </form>
 
     <button><a href="create.html">Create Your Own!</a></button>
@@ -100,6 +95,7 @@
   <script src="js/monsters.js"></script>
   <script src="js/constructor.js"></script>
   <script src="js/display.js"></script>
+  <script src="js/userMonsters.js"></script>
 </body>
 
 </html>

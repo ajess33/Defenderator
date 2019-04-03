@@ -107,12 +107,8 @@ main .display-wrapper .created-wrapper {
 }
 
 main .display-wrapper .created-wrapper button {
-  /* margin-left: 150px; */
-  /* float: right; */
-}
-
-main .display-wrapper .created-wrapper span {
-  margin-right: 250px;
+  float: right;
+  margin: 0 10px;
 }
 
 main .display-wrapper .created-wrapper #created-list li {
@@ -145,6 +141,11 @@ main form .form-input {
 
 .ghost {
   display: none;
+}
+
+.required {
+  color: red;
+  font-size: 1.5rem;
 }
 
 /* ===================== */

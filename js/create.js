@@ -1,3 +1,4 @@
+'use strict';
 function handleForm(e) {
   e.preventDefault();
   var name = e.target.name.value;
@@ -31,12 +32,9 @@ function handleForm(e) {
     type: type,
     notes: notes
   };
-  console.log('I am running');
-  monsters[name] = monster;
+  monsters[monster.name] = monster;
   localStorage.setItem('newMonster', JSON.stringify(monsters));
   e.target.reset();
   window.location.href = 'display.html';
 }
 document.getElementById('createNewMonster').addEventListener('submit', handleForm);
-
-console.log(document.getElementById('createNewMonster'));

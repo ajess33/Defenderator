@@ -3,7 +3,6 @@
 //monsters[whatevertheyenteredforname] = {}
 
 var monsters = {
-
   'Skeleton': {
     'type' : 'Undead',
     'strength': 10,
@@ -81,11 +80,3 @@ var monsters = {
   }
 
 };
-
-function savedMonsters() {
-  if(localStorage['newMonster']) {
-    monsters = JSON.parse(localStorage['newMonster']);
-  }
-}
-
-savedMonsters();
