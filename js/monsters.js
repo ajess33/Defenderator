@@ -50,7 +50,7 @@ var monsters = {
     'notesAbout' : 'Damage Immunities: poison, psychic. Condition Immunitites: blinded, charmed, deafened, exhaustion, frightened, paralyzed, petrified, poisoned. Senses: Blindsight 60ft (blind beyond radius). Antimagic Suseptibility: The armor is incapacitated while in the area of an antimagic field. If targeted by dispel magic, the armor must succeed on a Constitution saving throw against the caster\'s spell save DC or fall unconscious for 1 minute. False Appearance. While the armor remains motionless, it is indistinguishable from a normal suit of armor.'
   },
   'Orc' : {
-    'type' : 'Humanoid (orc)'
+    'type' : 'Humanoid (orc)',
     'strength': 16,
     'dexterity': 12,
     'constitution': 16,
