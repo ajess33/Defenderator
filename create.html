@@ -1,102 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Defenderator</title>
-    <link rel="stylesheet" href="styles/style.css" />
-    <link
-    href="https://fonts.googleapis.com/css?family=Lato:400,900"
-    rel="stylesheet"
-    />
-  </head>
-  <body>
-    <nav>
-      <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="display.html">DISPLAY</a></li>
-        <li><a href="about.html">ABOUT US</a></li>
-      </ul>
-    </nav>
-    <section class='container'>
-        <form id ='createNewMonster'>
-            <section class='newMonster'>
-                <div>
-                    <label for='name'>Name for monster</label>
-                    <input name='name' type='text' required>
-                </div>
-                <div>
-                    <label for='strength'>Strength</label>
-                    <input name='strength' type='number' required>
-                </div>
-                <div>
-                    <label for='dexterity'>Dexterity</label>
-                    <input name='dexterity' type='number' required>
-                </div>
-            </section>
-            <section class='newMonster'>
-                <div>
-                    <label for='constitution'>Constitution</label>
-                    <input name='constitution' type='number' required>
-                </div>
-                <div>
-                    <label for='inteligence'>Intelligence</label>
-                    <input name='inteligence' type='number' required>
-                </div>
-                <div>
-                    <label for='wisdom'>Wisdom</label>
-                    <input name='wisdom' type='number' required>
-                </div>
-            </section>
-            <section class='newMonster'>
-                <div>
-                    <label for='charisma'>Charisma</label>
-                    <input name='charisma' type='number' required>
-                </div>
-                <div>
-                    <label for='averagehp'>Average hp</label>
-                    <input name='averagehp' type='number' required>
-                </div>
-                <div>
-                    <label for='speed'>Speed</label>
-                    <input name='speed' type='number' required>
-                </div>
-            </section>
-            <section class='newMonster'>
-                <div>
-                    <label for='armorclass'>Armor Class</label>
-                    <input name='armorclass' type='number' required>
-                </div>
-                <div>
-                    <label for='proficiency'>Proficiency</label>
-                    <input name='proficiency' type='number' required>
-                </div>
-                <div>
-                    <label for='averagedamage'>Average Damage</label>
-                    <input name='averagedamage' type='number' required>
-                </div>
-            </section>
-            <section class='newMonster'>
-                <div>
-                    <label for='type'>Type of monster</label>
-                    <input name='type' type='text'>
-                </div>
-                <div class='notes'>
-                    <label for='notes'>Notes for monster</label>
-                    <textarea name='notes'></textarea>
-                </div>
-            </section>
-            <section class="acid">
-                <button type="submit">Create new monster</button>
-            </section>
-        </form>
-    </section>
-    <script src='js/monsters.js'></script>
-    <script src='js/create.js'></script>
-    <script src="js/userMonsters.js"></script>
-    <footer class="index">
-      <p>© Austin, Skylar, and Alexander | 2019</p>
-    </footer>
-  </body>
-</html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Defenderator</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet" />
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="display.html">CREATE</a></li>
+      <li><a href="about.html">ABOUT US</a></li>
+    </ul>
+  </nav>
+  <section class='container'>
+    <form id='createNewMonster'>
+      <section class='newMonster'>
+        <div>
+          <label for='name'>Name for monster</label>
+          <input name='name' type='text'>
+        </div>
+        <div>
+          <label for='strength'>Strength</label>
+          <input name='strength' type='number'>
+        </div>
+        <div>
+          <label for='dexterity'>Dexterity</label>
+          <input name='dexterity' type='number'>
+        </div>
+      </section>
+      <section class='newMonster'>
+        <div>
+          <label for='constitution'>Constitution</label>
+          <input name='constitution' type='number'>
+        </div>
+        <div>
+          <label for='inteligence'>Intelligence</label>
+          <input name='inteligence' type='number'>
+        </div>
+        <div>
+          <label for='wisdom'>Wisdom</label>
+          <input name='wisdom' type='number'>
+        </div>
+      </section>
+      <section class='newMonster'>
+        <div>
+          <label for='charisma'>Charisma</label>
+          <input name='charisma' type='number'>
+        </div>
+        <div>
+          <label for='averagehp'>Average hp</label>
+          <input name='averagehp' type='number'>
+        </div>
+        <div>
+          <label for='speed'>Speed</label>
+          <input name='speed' type='number'>
+        </div>
+      </section>
+      <section class='newMonster'>
+        <div>
+          <label for='armorclass'>Armor Class</label>
+          <input name='armorclass' type='number'>
+        </div>
+        <div>
+          <label for='proficiency'>Proficiency</label>
+          <input name='proficiency' type='number'>
+        </div>
+        <div>
+          <label for='averagedamage'>Average Damage</label>
+          <input name='averagedamage' type='number'>
+        </div>
+      </section>
+      <section class='newMonster'>
+        <div>
+          <label for='type'>Type of monster</label>
+          <input name='type' type='text'>
+        </div>
+        <div class='notes'>
+          <label for='notes'>Notes for monster</label>
+          <textarea name='notes'></textarea>
+        </div>
+      </section>
+      <section class="acid">
+        <button type="submit">Create new monster</button>
+      </section>
+    </form>
+  </section>
+  <script src='js/monsters.js'></script>
+  <script src='js/create.js'></script>
+  <script src="js/userMonsters.js"></script>
+  <footer class="index">
+    <p>© Austin, Skylar, and Alexander | 2019</p>
+  </footer>
+</body>
+
+ 
