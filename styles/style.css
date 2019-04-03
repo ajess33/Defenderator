@@ -15,7 +15,6 @@ body {
 
 nav ul li {
   display: inline-block;
-  /* border: 1px solid black; */
   width: 33%;
   text-align: center;
   padding: 10px 0px;
@@ -106,22 +105,35 @@ section.alexander {
   color: #db001d;
 }
 
-.us-container {
-  width: 80%;
-  margin: auto;
+.about-us {
+  box-sizing: border-box;
+  color: #00FF03;
+  margin-left: 5%;
 }
 
-.austin-info {
-  width: 60%;
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-.skylar p {
-  display: inline;
+.column {
+  margin-top: 3%;
+  float: left;
+  width: 30%;
+  padding: 10px;
+}
+.column img {
+  margin-left: 15%;
+  margin-bottom: 2%;
+  -webkit-box-shadow: 10px 10px 85px 3px rgba(219,0,29,1);
+  -moz-box-shadow: 10px 10px 85px 3px rgba(219,0,29,1);
+  box-shadow: 10px 10px 85px 3px rgba(219,0,29,1);
 }
 
-.alexander p {
-  display: inline;
-}
+.column h2 {
+  font-size: 36px;
+  text-align: center;
 
 section.container {
   height: 49vh;
