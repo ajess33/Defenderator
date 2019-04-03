@@ -216,8 +216,10 @@ function displayChart(monster) {
             monster.wisdom,
             monster.charisma
           ],
-
-          borderWidth: 1
+          borderColor: [
+            'rgba(219, 0,29, 0.2)'
+          ],
+          borderWidth: 2
         }
       ]
     },
