@@ -29,9 +29,9 @@ function handleForm(e) {
     average_damage: average_damage,
     notes: notes
   };
+  localStorage
 
   monsters[name] = monster;
 }
 document
-  .getElementById('createNewMonster')
-  .addEventListener('submit', handleForm);
+  .getElementById('createNewMonster').addEventListener('submit', handleForm);
