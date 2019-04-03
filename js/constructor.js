@@ -29,36 +29,32 @@ function MakeMonster(monsterType, name, increment) {
   MakeMonster.all.push(this);
 }
 
-MakeMonster.prototype.baseStatUp = function() {
+MakeMonster.prototype.baseStatUp = function () {
   if (this.increment >= 20) {
     this.strength += 5;
     this.dexterity += 5;
     this.constitution += 5;
     this.wisdom += 5;
     this.charisma += 5;
-  }
-  else if (this.increment >= 16) {
+  } else if (this.increment >= 16) {
     this.strength += 4;
     this.dexterity += 4;
     this.constitution += 4;
     this.wisdom += 4;
     this.charisma += 4;
-  }
-  else if (this.increment >= 12) {
+  } else if (this.increment >= 12) {
     this.strength += 3;
     this.dexterity += 3;
     this.constitution += 3;
     this.wisdom += 3;
     this.charisma += 3;
-  }
-  else if (this.increment >= 8) {
+  } else if (this.increment >= 8) {
     this.strength += 2;
     this.dexterity += 2;
     this.constitution += 2;
     this.wisdom += 2;
     this.charisma += 2;
-  }
-  else if (this.increment >= 4) {
+  } else if (this.increment >= 4) {
     this.strength += 1;
     this.dexterity += 1;
     this.constitution += 1;
@@ -67,16 +63,16 @@ MakeMonster.prototype.baseStatUp = function() {
   }
 };
 
-MakeMonster.prototype.statModifiers = function() {
-  this.strMod = Math.floor((this.strength -10)/2);
-  this.dexMod = Math.floor((this.dexterity -10)/2);
-  this.conMod = Math.floor((this.constitution -10)/2);
-  this.intMod = Math.floor((this.inteligence -10)/2);
-  this.wisMod = Math.floor((this.wisdom - 10)/2);
-  this.chaMod = Math.floor((this.charisma -10)/2);
+MakeMonster.prototype.statModifiers = function () {
+  this.strMod = Math.floor((this.strength - 10) / 2);
+  this.dexMod = Math.floor((this.dexterity - 10) / 2);
+  this.conMod = Math.floor((this.constitution - 10) / 2);
+  this.intMod = Math.floor((this.inteligence - 10) / 2);
+  this.wisMod = Math.floor((this.wisdom - 10) / 2);
+  this.chaMod = Math.floor((this.charisma - 10) / 2);
 };
 
-MakeMonster.prototype.totalHealth = function() {
+MakeMonster.prototype.totalHealth = function () {
   this.averagehp =
     this.averagehp +
     Math.ceil(
@@ -84,28 +80,26 @@ MakeMonster.prototype.totalHealth = function() {
     );
 };
 
-MakeMonster.prototype.totaldamage = function() {
+MakeMonster.prototype.totaldamage = function () {
   this.averagedamage =
     this.averagedamage +
     Math.ceil(
       (this.averagedamage * 0.25 * this.increment) +
-        (this.strMod * (this.increment + 1))
+      this.strMod + (this.increment + 1)
     );
 };
 
-MakeMonster.prototype.newProficiency = function() {
+MakeMonster.prototype.newProficiency = function () {
   this.proficiency =
     this.proficiency + Math.floor(this.proficiency * 0.25 * this.increment);
 };
 
-MakeMonster.prototype.newArmorClass = function() {
+MakeMonster.prototype.newArmorClass = function () {
   this.armorclass =
-    this.armorclass +
-    this.dexMod +
-    Math.floor(this.increment * 0.5);
+    this.armorclass + this.dexMod + Math.floor(this.increment * 0.5);
 };
 
-MakeMonster.prototype.render = function() {
+MakeMonster.prototype.render = function () {
   this.baseStatUp();
   this.statModifiers();
   this.totalHealth();
@@ -125,6 +119,9 @@ elCreateForm.addEventListener('submit', handleSubmit);
 
 function handleSubmit(e) {
   e.preventDefault();
+
+  // clear the form!
+
   var monsterName = elName.value;
   var monsterSelected =
     elMonsterSelect.options[elMonsterSelect.selectedIndex].value;
@@ -136,9 +133,13 @@ function handleSubmit(e) {
     levelSelected
   );
   newMonster.render();
+  addToSquad(newMonster);
   displayChart(newMonster);
   populateOtherStats(newMonster);
+  localStorage.setItem( 'MakeMonster.all', JSON.stringify(MakeMonster.all) );
 }
+
+// CHART STUFF
 
 function displayChart(monster) {
   var healthStat = monster.averagehp;
@@ -214,8 +215,10 @@ function displayChart(monster) {
             monster.wisdom,
             monster.charisma
           ],
-
-          borderWidth: 1
+          borderColor: [
+            'rgba(219, 0,29, 0.2)'
+          ],
+          borderWidth: 3,
         }
       ]
     },
@@ -247,7 +250,14 @@ function displayChart(monster) {
 }
 
 function populateOtherStats(monster) {
+  var attributesTitle = document.getElementById('attr-title');
+  attributesTitle.classList.remove('ghost');
   var statsList = document.getElementById('other-atts');
+
+  //while there are li's in the ul, removeChild
+  while (statsList.firstChild) {
+    statsList.removeChild(statsList.firstChild);
+  }
 
   var statLabels = [
     'StrMod:',
@@ -282,5 +292,16 @@ function populateOtherStats(monster) {
     var elLi = document.createElement('li');
     elLi.textContent = statLabels[i] + ' ' + otherStats[i];
     statsList.appendChild(elLi);
+
   }
+}
+
+
+// CREATED LIST STUFF
+
+function addToSquad(monster) {
+  var elSquadList = document.getElementById('created-list');
+  var newSquadMember = document.createElement('li');
+  newSquadMember.innerHTML = `${monster.name} - Adjustment: ${monster.increment} - <button>Show Stats</button>`;
+  elSquadList.appendChild(newSquadMember);
 }

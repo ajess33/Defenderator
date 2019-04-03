@@ -1,5 +1,9 @@
 @import 'reset.css';
 
+/* ===================== */
+/* INDEX PAGE */
+/* ===================== */
+
 body {
   font-family: 'Lato', 'sans-serif';
   margin: 0 auto;
@@ -9,24 +13,42 @@ body {
   background-size: cover;
 }
 
+nav {
+  margin-top: 1%;
+}
+
 nav ul li {
   display: inline-block;
-  border: 1px solid black;
   width: 33%;
   text-align: center;
   padding: 10px 0px;
   font-size: 20px;
-  
 }
 
-a {
+nav a {
   text-decoration: none;
-  color: #A30A08;
+  color: #a30a08;
+  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 
+  0 0 20px #49ff18, 0 0 30px #49FF18, 
+  0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+}
+
+nav a:hover {
+  color: #49FF18;
+  text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+}
+
+.enter-the-pit a{
+  text-decoration: none;
+  color: #a30a08;
 }
 
 table {
   margin: 20px auto;
   margin-bottom: 0px;
+  box-sizing: border-box;
+  padding-top: 50px;
+  
 }
 
 table tr th {
@@ -34,13 +56,13 @@ table tr th {
   text-align: center;
   padding: 1px 5px;
   font-weight: bold;
-  color: #DB001D;
+  color: #db001d;
 }
 
 table tr td {
   text-align: center;
   font-size: 25px;
-  color: #DB001D;
+  color: #db001d;
 }
 
 footer.index {
@@ -66,38 +88,107 @@ section.acid button {
   margin-left: 42%;
   font-size: 22px;
   background-color: #303030;
-  color: #DB001D;
+  color: #db001d;
   border-radius: 25px;
   padding: 15px;
 }
 
+/* ===================== */
+/* DISPLAY PAGE */
+/* ===================== */
+
+main .display-wrapper {
+  background: #999;
+}
+
+main .display-wrapper .created-wrapper {
+  width: 400px;
+  margin: 50px auto !important;
+}
+
+main .display-wrapper .created-wrapper button {
+  margin-left: 80px;
+  /* float: right; */
+}
+
+main .display-wrapper .created-wrapper #created-list li {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 20px 30px;
+  margin-top: 10px;
+}
+
+main .display-wrapper .created-wrapper h3 {
+  color: #a30a08;
+  margin-top: 50px;
+  text-align: center;
+  padding-top: 50px;
+}
+
+main #create-enemy {
+  width: 400px;
+  margin: 150px auto 30px auto;
+}
+
+main form label {
+  color: #fff;
+}
+
+main form .form-input {
+  display: block;
+  margin: 20px 0;
+}
+
+.ghost {
+  display: none;
+}
+
+/* ===================== */
+/* ABOUT US */
+/* ===================== */
+
 section.austin {
-  color: #DB001D;
+  color: #db001d;
 }
 
 section.skylar {
-  color: #DB001D;
+  color: #db001d;
 }
 
 section.alexander {
-  color: #DB001D;
+  color: #db001d;
 }
 
-.us-container {
-  width: 80%;
-  margin: auto;
+.about-us {
+  box-sizing: border-box;
+  color: #00FF03;
+  margin-left: 5%;
 }
 
-.austin-info {
-  width: 60%;
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-.skylar p {
-  display: inline;
+.column {
+  margin-top: 3%;
+  float: left;
+  width: 30%;
+  padding: 10px;
+}
+.column img {
+  margin-left: 15%;
+  margin-bottom: 2%;
+  -webkit-box-shadow: 10px 10px 85px 3px rgba(219,0,29,1);
+  -moz-box-shadow: 10px 10px 85px 3px rgba(219,0,29,1);
+  box-shadow: 10px 10px 85px 3px rgba(219,0,29,1);
 }
 
-.alexander p {
-  display: inline;
+.column h2 {
+  font-size: 36px;
+  text-align: center;
+}
 
 section.container {
   height: 49vh;
@@ -121,7 +212,7 @@ div input {
   display: block;
   float: left;
   clear: both;
-  width: 95%
+  width: 95%;
 }
 
 div textarea {
