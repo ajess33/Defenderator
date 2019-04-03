@@ -12,6 +12,7 @@ function handleForm(e) {
   var armor_class = parseInt(e.target.armor_class.value);
   var proficiency = parseInt(e.target.proficiency.value);
   var average_damage = parseInt(e.target.average_damage.value);
+  var type = e.target.type.value;
   var notes = e.target.notes.value;
 
   var monster = {
@@ -27,11 +28,12 @@ function handleForm(e) {
     armor_class: armor_class,
     proficiency: proficiency,
     average_damage: average_damage,
+    type: type,
     notes: notes
   };
+  localStorage
 
   monsters[name] = monster;
 }
 document
-  .getElementById('createNewMonster')
-  .addEventListener('submit', handleForm);
+  .getElementById('createNewMonster').addEventListener('submit', handleForm);
