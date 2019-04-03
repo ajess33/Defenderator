@@ -8,11 +8,11 @@ function handleForm(e) {
   var inteligence = parseInt(e.target.inteligence.value);
   var wisdom = parseInt(e.target.wisdom.value);
   var charisma = parseInt(e.target.charisma.value);
-  var average_hp = parseInt(e.target.average_hp.value);
+  var averagehp = parseInt(e.target.averagehp.value);
   var speed = parseInt(e.target.speed.value);
-  var armor_class = parseInt(e.target.armor_class.value);
+  var armorclass = parseInt(e.target.armorclass.value);
   var proficiency = parseInt(e.target.proficiency.value);
-  var average_damage = parseInt(e.target.average_damage.value);
+  var averagedamage = parseInt(e.target.averagedamage.value);
   var type = e.target.type.value;
   var notes = e.target.notes.value;
 
@@ -24,11 +24,11 @@ function handleForm(e) {
     inteligence: inteligence,
     wisdom: wisdom,
     charisma: charisma,
-    average_hp: average_hp,
+    averagehp: averagehp,
     speed: speed,
-    armor_class: armor_class,
+    armorclass: armorclass,
     proficiency: proficiency,
-    average_damage: average_damage,
+    averagedamage: averagedamage,
     type: type,
     notes: notes
   };
