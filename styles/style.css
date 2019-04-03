@@ -80,6 +80,7 @@ section.acid button {
 
 main #create-enemy {
   width: 400px;
+  margin: 150px auto 30px auto;
 }
 
 main form label {
@@ -88,6 +89,11 @@ main form label {
 
 main form .form-input {
   display: block;
+  margin: 20px 0;
+}
+
+.ghost {
+  display: none;
 }
 
 /* ===================== */

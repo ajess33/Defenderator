@@ -243,6 +243,8 @@ function displayChart(monster) {
 }
 
 function populateOtherStats(monster) {
+  var attributesTitle = document.getElementById('attr-title');
+  attributesTitle.classList.remove('ghost');
   var statsList = document.getElementById('other-atts');
 
   //while there are li's in the ul, removeChild
