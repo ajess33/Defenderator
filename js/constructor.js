@@ -26,6 +26,8 @@ function MakeMonster(monsterType, name, increment) {
   this.increment = parseInt(increment);
 
   // push each new monster to an array
+  MakeMonster.all.push(this);
+
   monsters[this.name] = this;
 }
 
@@ -308,33 +310,40 @@ function populateOtherStats(monster) {
 
 function addToSquad(monster) {
   var elSquadList = document.getElementById('created-list');
+  console.log(elSquadList);
+
   var newSquadMember = document.createElement('li');
-  newSquadMember.innerHTML = `${monster.name} - Adjustment: <span>${monster.increment}</span> <button class="selectMonster" data-type="show-created-stats" data-name="${monster.name}">Show Stats</button> - <button id="remove-monster">X</button>`;
+  newSquadMember.innerHTML = `${monster.name} - Adjustment: <span>${monster.increment}</span> <button class="selectMonster" data-type="show-created-stats" data-name="${monster.name}">Show Stats</button> - <button class="remove-monster" data-name="${monster.name}">X</button>`;
   elSquadList.appendChild(newSquadMember);
-  var showButton = document.getElementsByClassName('selectMonster');
-  console.log(showButton);
-  for (var i = 0; i < showButton.length; i++) {
-    showButton[i].addEventListener('click', showCreatedStats);
+
+  var elRemoveButton = document.getElementsByClassName('remove-monster');
+  for (var i = 0; i < elRemoveButton.length; i++) {
+    elRemoveButton[i].addEventListener('click', removeMonster);
   }
 
+  var showButton = document.getElementsByClassName('selectMonster');
+  for (var j = 0; j < showButton.length; j++) {
+    console.log(showButton[j]);
+    showButton[j].addEventListener('click', showCreatedStats);
+  }
 }
 
-
-//DOESNT WORK
 function showCreatedStats(e) {
-
-  console.log(monsters[e.target.getAttribute('data-name')]);
   displayChart(monsters[e.target.getAttribute('data-name')]);
   populateOtherStats(monsters[e.target.getAttribute('data-name')]);
 }
 
-// function removeMonster(e) {
-//   var elRemoveButton = document.getElementById('remove-monster');
-//   console.log(e);
-//   // for (var i = 0; i < Monsters.all.length; i++) {
-//   //   if ()
-//   // }
-// }
+function removeMonster(e) {
+  var removedMonster = e.target.getAttribute('data-name');
+  console.log(removedMonster);
+  var elSquadList = document.getElementById('created-list');
+  var elToRemove = document.querySelector(`[data-name=${removedMonster}]`);
+  var listItem = elToRemove.parentNode;
+  elSquadList.removeChild(listItem);
+
+}
+
+
 
 
 
