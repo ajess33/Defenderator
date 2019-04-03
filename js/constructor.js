@@ -137,6 +137,7 @@ function handleSubmit(e) {
   displayChart(newMonster);
   populateOtherStats(newMonster);
   localStorage.setItem( 'MakeMonster.all', JSON.stringify(MakeMonster.all) );
+  e.target.reset();
 }
 
 // CHART STUFF
