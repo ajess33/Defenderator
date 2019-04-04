@@ -78,7 +78,7 @@ function displayChart(monster) {
     options: {
       legend: {
         labels: {
-          fontSize: 150
+          fontSize: 170,
         }
       },
       scales: {
@@ -86,15 +86,15 @@ function displayChart(monster) {
           {
             ticks: {
               beginAtZero: true,
-              fontSize: 100
+              fontSize: 200
             }
           }
         ],
         xAxes: [
           {
-            ticks: {
-              fontSize: 100
-            }
+            // ticks: {
+            //   fontSize: 200
+            // }
           }
         ]
       }
@@ -148,7 +148,7 @@ function displayChart(monster) {
           color: 'white'
         },
         gridLines: {
-          color: 'rgba(255, 255, 255, 0.2)'
+          color: 'rgba(255, 255, 255, 0.2)',
         },
         ticks: {
           min: 0,
