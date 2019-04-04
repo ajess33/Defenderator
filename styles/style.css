@@ -316,7 +316,9 @@ main #results-display .other-attributes {
 /* ===================== */
 
 .mission-statement {
-  margin-top: 5%;
+  margin-top: 7%;
+  margin-left: 5%;
+  margin-bottom: 2%;
 }
 .mission-statement h3 {
   font-size: 24px;
