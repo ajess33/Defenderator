@@ -391,6 +391,17 @@ main #results-display .other-attributes {
 
 section.container {
   height: 50%;
+  /* max-width: 1200px; */
+  /* text-align: center; */
+}
+
+#createNewMonster {
+  margin: 200px auto 100px auto;
+  max-width: 800px;
+}
+
+.container form {
+  margin: 0 auto;
 }
 
 section.newMonster div {
@@ -405,15 +416,17 @@ div label.createInput {
   color: white;
   padding-bottom: 5px;
   padding-top: 10px;
-
+  font-size: 1.3rem;
 }
 
 div input.createInput {
   display: block;
   float: right;
   clear: both;
-  width: 25%;
+  width: 30%;
   border-radius: 5px;
+  height: 30px;
+  font-size: 1.1rem;
 }
 
 div label.textInput {
@@ -423,6 +436,7 @@ div label.textInput {
   color: white;
   padding-bottom: 5px;
   padding-top: 10px;
+  font-size: 1.3rem;
 }
 
 div input.textInput {
@@ -431,6 +445,8 @@ div input.textInput {
   clear: both;
   width: 25%;
   border-radius: 5px;
+  height: 30px;
+  margin-bottom: 10px;
 }
 
 div textarea {
@@ -457,15 +473,24 @@ textarea:focus {
 }
 
 section.createButton button {
-  margin-top: 10%;
-  margin-left: 20%;
   font-size: 20px;
-  background-color: #303030;
-  color: #db001d;
-  border-radius: 10px;
+  background-color: #FF5D5D;
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+  border-radius: 5px;
   padding: 10px;
   border-color: rgb(31, 31, 31);
   text-shadow: -4px 2px 14px rgb(0, 0, 0);
+  margin: 100px auto;
+  margin-left: 50px;
+  width: 300px;
+  cursor: pointer;
+}
+
+section.createButton button:hover {
+  background-color: #fff;
+  color: #FF5D5D;
 }
 
 /* =================== */
