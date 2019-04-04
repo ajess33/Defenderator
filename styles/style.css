@@ -212,6 +212,21 @@ main .display-wrapper .created-wrapper button {
   margin: 0 10px;
   padding: 5px 10px;
   font-size: 1.1rem;
+  border-radius: 5px;
+  margin-top: -5px;
+}
+
+.created-wrapper .selectMonster {
+  background: #86FF83;
+  letter-spacing: 1.2px;
+  font-weight: 900;
+  /* color: #fff; */
+}
+
+.created-wrapper .remove-monster {
+  background: #fff;
+  color: #FF5D5D;
+  font-weight: 900;
 }
 
 main .display-wrapper .created-wrapper #created-list li {
@@ -375,7 +390,7 @@ div label.createInput {
   color: white;
   padding-bottom: 5px;
   padding-top: 10px;
-  
+
 }
 
 div input.createInput {
@@ -436,4 +451,21 @@ section.createButton button {
   padding: 10px;
   border-color: rgb(31, 31, 31);
   text-shadow: -4px 2px 14px rgb(0, 0, 0);
+}
+
+/* =================== */
+/* FOOTER */
+/* =================== */
+
+footer {
+  color: #FF5D5D;
+  height: 20vh;
+  text-align: center;
+  border-top: 2px solid #86FF83;
+}
+
+footer h5 {
+  font-size: 1.3rem;
+  margin-top: 100px;
+  margin-bottom: 20px;
 }
