@@ -59,7 +59,7 @@ function displayChart(monster) {
   var healthArray = [];
   healthArray.push(healthStat);
 
-  Chart.defaults.global.defaultFontColor = '#a30a08';
+  Chart.defaults.global.defaultFontColor = '#FF5D5D';
 
   var ctx = document.getElementById('myChart');
   var myChart = new Chart(ctx, {
@@ -71,14 +71,14 @@ function displayChart(monster) {
           label: 'Total Health',
           data: [healthStat],
           borderWidth: 1,
-          backgroundColor: '#db001d'
+          backgroundColor: '#FF5D5D'
         }
       ]
     },
     options: {
       legend: {
         labels: {
-          fontSize: 130
+          fontSize: 170,
         }
       },
       scales: {
@@ -86,15 +86,15 @@ function displayChart(monster) {
           {
             ticks: {
               beginAtZero: true,
-              fontSize: 80
+              fontSize: 200
             }
           }
         ],
         xAxes: [
           {
-            ticks: {
-              fontSize: 80
-            }
+            // ticks: {
+            //   fontSize: 200
+            // }
           }
         ]
       }
@@ -141,24 +141,30 @@ function displayChart(monster) {
     options: {
       scale: {
         pointLabels: {
-          fontSize: 50
+          fontSize: 40,
+          // fontColor: '#00FF03'
+        },
+        angleLines: {
+          color: 'white'
+        },
+        gridLines: {
+          color: 'rgba(255, 255, 255, 0.2)',
         },
         ticks: {
           min: 0,
           max: 20,
-          stepSize: 2,
-          fontSize: 25
+          stepSize: 4,
+          fontSize: 35,
+          showLabelBackdrop: false,
+          fontColor: '#00FF03',
         }
       },
       legend: {
         labels: {
-          fontSize: 50
+          fontSize: 50,
         }
       },
       scales: {
-        gridLines: {
-          color: '#fff'
-        },
         yAxes: [
           {
             ticks: {
@@ -226,7 +232,7 @@ function addToSquad(monster) {
   console.log(elSquadList);
 
   var newSquadMember = document.createElement('li');
-  newSquadMember.innerHTML = `NAME: <span class="green-attr">${monster.name}</span> - ADJ LVL: <span class="green-attr">${monster.increment}</span> <button class="selectMonster" data-type="show-created-stats" data-name="${monster.name}">Show Stats</button><button class="remove-monster" data-name="${monster.name}">X</button>`;
+  newSquadMember.innerHTML = `NAME: <span class="green-attr">${monster.name}</span> - ADJ LVL: <span class="green-attr">${monster.increment}</span> <button class="selectMonster" data-type="show-created-stats" data-name="${monster.name}">SHOW STATS</button><button class="remove-monster" data-name="${monster.name}">X</button>`;
   elSquadList.appendChild(newSquadMember);
 
   var elRemoveButton = document.getElementsByClassName('remove-monster');
