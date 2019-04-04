@@ -141,7 +141,7 @@ function displayChart(monster) {
     options: {
       scale: {
         pointLabels: {
-          fontSize: 40,
+          fontSize: 50,
           // fontColor: '#00FF03'
         },
         angleLines: {
@@ -149,12 +149,13 @@ function displayChart(monster) {
         },
         gridLines: {
           color: 'rgba(255, 255, 255, 0.2)',
+          // color: '#00ff03'
         },
         ticks: {
           min: 0,
           max: 20,
           stepSize: 4,
-          fontSize: 35,
+          fontSize: 50,
           showLabelBackdrop: false,
           fontColor: '#00FF03',
         }
