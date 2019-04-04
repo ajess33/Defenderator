@@ -139,6 +139,11 @@ function displayChart(monster) {
       ]
     },
     options: {
+      tooltips: {
+        titleFontSize: 80,
+        bodyFontSize: 60,
+        padding: 15
+      },
       scale: {
         pointLabels: {
           fontSize: 50,
