@@ -20,73 +20,75 @@
   </nav>
   <section class='container'>
     <form id='createNewMonster'>
-      <section class='newMonster'>
+      <section class='textInputs'>
         <div>
-          <label for='name'>Name for monster</label>
-          <input name='name' type='text'>
+          <label class="textInput" for='name'>Name for monster</label>
+          <input class="textInput" name='name' type='text'>
         </div>
         <div>
-          <label for='strength'>Strength</label>
-          <input name='strength' type='number'>
-        </div>
-        <div>
-          <label for='dexterity'>Dexterity</label>
-          <input name='dexterity' type='number'>
-        </div>
-      </section>
-      <section class='newMonster'>
-        <div>
-          <label for='constitution'>Constitution</label>
-          <input name='constitution' type='number'>
-        </div>
-        <div>
-          <label for='inteligence'>Intelligence</label>
-          <input name='inteligence' type='number'>
-        </div>
-        <div>
-          <label for='wisdom'>Wisdom</label>
-          <input name='wisdom' type='number'>
-        </div>
-      </section>
-      <section class='newMonster'>
-        <div>
-          <label for='charisma'>Charisma</label>
-          <input name='charisma' type='number'>
-        </div>
-        <div>
-          <label for='averagehp'>Average hp</label>
-          <input name='averagehp' type='number'>
-        </div>
-        <div>
-          <label for='speed'>Speed</label>
-          <input name='speed' type='number'>
-        </div>
-      </section>
-      <section class='newMonster'>
-        <div>
-          <label for='armorclass'>Armor Class</label>
-          <input name='armorclass' type='number'>
-        </div>
-        <div>
-          <label for='proficiency'>Proficiency</label>
-          <input name='proficiency' type='number'>
-        </div>
-        <div>
-          <label for='averagedamage'>Average Damage</label>
-          <input name='averagedamage' type='number'>
-        </div>
-      </section>
-      <section class='newMonster'>
-        <div>
-          <label for='type'>Type of monster</label>
-          <input name='type' type='text'>
+          <label class="textInput" for='type'>Type of monster</label>
+          <input class="textInput" name='type' type='text'>
         </div>
         <div class='notes'>
-          <label for='notes'>Notes for monster</label>
+          <label class="textInput" for='notes'>Notes for monster</label>
           <textarea name='notes'></textarea>
         </div>
       </section>
-      <section class="acid">
+      <section class='newMonster'>
+        <div>
+          <label class="createInput" for='strength'>Strength</label>
+          <input class="createInput" name='strength' type='number'>
+        </div>
+        <div>
+          <label class="createInput" for='dexterity'>Dexterity</label>
+          <input class="createInput" name='dexterity' type='number'>
+        </div>
+        <div>
+          <label class="createInput" for='constitution'>Constitution</label>
+          <input class="createInput" name='constitution' type='number'>
+        </div>
+      </section>
+      <section class='newMonster'>
+        <div>
+          <label class="createInput" for='inteligence'>Intelligence</label>
+          <input class="createInput" name='inteligence' type='number'>
+        </div>
+      
+        <div>
+          <label class="createInput" for='wisdom'>Wisdom</label>
+          <input class="createInput" name='wisdom' type='number'>
+        </div>
+        <div>
+          <label class="createInput" for='charisma'>Charisma</label>
+          <input class="createInput" name='charisma' type='number'>
+        </div>
+      </section>
+      <section class='newMonster'>
+        <div>
+          <label class="createInput" for='averagehp'>Average hp</label>
+          <input class="createInput" name='averagehp' type='number'>
+        </div>
+        <div>
+          <label class="createInput" for='speed'>Speed</label>
+          <input class="createInput" name='speed' type='number'>
+        </div>
+      
+        <div>
+          <label class="createInput" for='armorclass'>Armor Class</label>
+          <input class="createInput" name='armorclass' type='number'>
+        </div>
+      </section>
+      <section class='newMonster'>
+        <div>
+          <label class="createInput" for='proficiency'>Proficiency</label>
+          <input class="createInput" name='proficiency' type='number'>
+        </div>
+        <div>
+          <label class="createInput" for='averagedamage'>Average Damage</label>
+          <input class="createInput" name='averagedamage' type='number'>
+        </div>
+      </section>
+      <section class="createButton">
         <button type="submit">Create new monster</button>
       </section>
     </form>
