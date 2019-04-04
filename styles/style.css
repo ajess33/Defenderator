@@ -323,7 +323,7 @@ main #results-display .other-attributes {
   margin-bottom: 2%;
 }
 .mission-statement h3 {
-  font-size: 32px;
+  font-size: 30px;
 
   color: #FF5D5D;
   padding-bottom: 15px;
@@ -331,7 +331,7 @@ main #results-display .other-attributes {
 
 .mission-statement span {
   font-weight: bold;
-  font-size: 32px;
+  font-size: 42px;
 }
 
 .mission-statement pre {
@@ -342,6 +342,7 @@ main #results-display .other-attributes {
   box-sizing: border-box;
   color: #86FF83;
   margin-left: 5%;
+  margin-bottom: 4%;
 }
 
 .row:after {
@@ -359,6 +360,7 @@ main #results-display .other-attributes {
   border-radius: 8px;
   margin-left: 4%;
 }
+
 .column img {
   margin-top: 5%;
   margin-left: auto;
@@ -379,12 +381,16 @@ main #results-display .other-attributes {
   color: #FF5D5D;
 }
 
+.column pre {
+  font-size:20px;
+}
+
 .bio {
   font-size: 25px;
   background-color: #31313162;
   border: 1px solid black;
   border-radius: 8px;
-  line-height: 20px;
+  line-height: 28px;
 }
 
 /* ===================== */
