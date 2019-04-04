@@ -1,6 +1,6 @@
 main .display-wrapper {
   min-height: 70vh;
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
   padding-bottom: 50px;
 }
 
@@ -30,7 +30,7 @@ canvas {
   padding-top: 30px;
   margin: 150px auto 0 auto;
   text-align: center;
-  border-top: 2px solid #00ff03;
+  border-top: 2px solid #86ff83;
 }
 
 .other-attributes {
@@ -50,3 +50,5 @@ canvas {
   margin-top: 10px;
   font-size: 0.9rem;
 }
+
+

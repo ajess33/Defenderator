@@ -232,7 +232,7 @@ function addToSquad(monster) {
   console.log(elSquadList);
 
   var newSquadMember = document.createElement('li');
-  newSquadMember.innerHTML = `NAME: <span class="green-attr">${monster.name}</span> - ADJ LVL: <span class="green-attr">${monster.increment}</span> <button class="selectMonster" data-type="show-created-stats" data-name="${monster.name}">Show Stats</button><button class="remove-monster" data-name="${monster.name}">X</button>`;
+  newSquadMember.innerHTML = `NAME: <span class="green-attr">${monster.name}</span> - ADJ LVL: <span class="green-attr">${monster.increment}</span> <button class="selectMonster" data-type="show-created-stats" data-name="${monster.name}">SHOW STATS</button><button class="remove-monster" data-name="${monster.name}">X</button>`;
   elSquadList.appendChild(newSquadMember);
 
   var elRemoveButton = document.getElementsByClassName('remove-monster');
