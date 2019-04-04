@@ -322,7 +322,7 @@ main #results-display .other-attributes {
   margin-bottom: 2%;
 }
 .mission-statement h3 {
-  font-size: 24px;
+  font-size: 32px;
 
   color: #FF5D5D;
   padding-bottom: 15px;
@@ -334,7 +334,7 @@ main #results-display .other-attributes {
 }
 
 .mission-statement pre {
-  font-size: 18px;
+  font-size: 28px;
 }
 
 .about-us {
@@ -369,7 +369,7 @@ main #results-display .other-attributes {
 }
 
 .column h2 {
-  font-size: 30px;
+  font-size: 38px;
   text-align: center;
   border-bottom: 3px solid black;
   border-radius: 8px;
@@ -379,7 +379,7 @@ main #results-display .other-attributes {
 }
 
 .bio {
-  font-size: 17px;
+  font-size: 25px;
   background-color: #31313162;
   border: 1px solid black;
   border-radius: 8px;
