@@ -30,15 +30,9 @@ nav a {
   color: #86ff83;
 }
 
-
 nav a:hover {
-  color: #49FF18;
+  color: #FF5D5D;
   text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #FF5D5D;
-}
-
-.enter-the-pit a{
-  text-decoration: none;
-  color: #86ff83;
 }
 
 table {
@@ -78,13 +72,14 @@ section.acid button {
   margin-top: 2%;
   margin-left: 44%;
   font-size: 20px;
-  background-color: #303030;
+  background-color: #303030b0;
   color: #86ff83;
   border-radius: 10px;
   padding: 10px;
   border-color: rgb(31, 31, 31);
   text-shadow: -4px 2px 14px rgb(107, 107, 107);
   animation: pulse 4s infinite;
+  outline: none;
 }
 
 @keyframes pulse {
@@ -99,6 +94,18 @@ section.acid button {
   }
 }
 
+section.acid button:hover {
+  background-color: rgba(255, 255, 255, 0.356);
+}
+
+.enter-the-pit a{
+  text-decoration: none;
+  color: #86ff83;
+}
+
+.enter-the-pit a:hover {
+  color: #FF5D5D;
+}
 .create-button {
   float: right;
 }
