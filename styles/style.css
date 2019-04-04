@@ -266,6 +266,7 @@ main form .form-input {
   font-size: 1.5rem;
 }
 
+
 .green-attr {
   color: #86FF83;
   /* font-weight: 900; */
@@ -278,6 +279,10 @@ main #results-display .other-attributes {
   height: 300px;
   color: #fff;
   padding: 10px;
+}
+
+.other-attributes h4 {
+  font-size: .8rem;
 }
 
 /* ===================== */
@@ -390,3 +395,9 @@ div textarea {
 section.newMonster div.notes {
   width: 100%;
 }
+
+
+/* =================== */
+/* FOOTER */
+/* =================== */
+

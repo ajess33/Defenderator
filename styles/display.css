@@ -1,7 +1,7 @@
 main .display-wrapper {
   min-height: 70vh;
   margin-bottom: 100px;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
 }
 
 #myChart {
@@ -17,6 +17,7 @@ main .display-wrapper {
   width: 700px !important;
   height: 600px !important;
   margin-left: 50px;
+  margin-right: 50px;
 }
 
 canvas {
@@ -29,13 +30,14 @@ canvas {
   padding-top: 30px;
   margin: 150px auto 0 auto;
   text-align: center;
+  border-top: 2px solid #00ff03;
 }
 
 .other-attributes {
   width: 400px;
   display: inline-block;
   margin-left: 30px;
-  padding-bottom: 100px;
+  padding-bottom: 120px;
   text-align: left;
 }
 
