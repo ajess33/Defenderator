@@ -365,6 +365,7 @@ main #results-display .other-attributes {
   margin-bottom: 1%;
   box-shadow: 10px 9px 105px -19px rgba(219,0,29,0.5);
   border: 1px solid black;
+  display: block;
 }
 
 .column h2 {
@@ -372,7 +373,7 @@ main #results-display .other-attributes {
   text-align: center;
   border-bottom: 3px solid black;
   border-radius: 8px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   padding-top: 20px;
   color: #FF5D5D;
 }
