@@ -27,7 +27,7 @@ nav ul li {
 
 nav a {
   text-decoration: none;
-  color: #ff5d5d;
+  color: #86ff83;
   animation: pulse 4s infinite;
 }
 
@@ -61,7 +61,7 @@ table {
   margin-bottom: 0px;
   box-sizing: border-box;
   padding-top: 50px;
-  text-shadow: 4px 6px 5px rgba(126, 126, 126, 0.59);
+  text-shadow: 4px 6px 12px rgba(145, 145, 145, 0.59);
 }
 
 table tr th {
