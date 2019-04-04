@@ -374,7 +374,7 @@ main #results-display .other-attributes {
   border-radius: 8px;
   padding-bottom: 5px;
   padding-top: 20px;
-  color: #db001d;
+  color: #FF5D5D;
 }
 
 .bio {
@@ -391,8 +391,6 @@ main #results-display .other-attributes {
 
 section.container {
   height: 50%;
-  /* max-width: 1200px; */
-  /* text-align: center; */
 }
 
 #createNewMonster {
