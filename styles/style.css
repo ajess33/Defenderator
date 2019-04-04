@@ -42,7 +42,7 @@ table {
   margin-bottom: 0px;
   box-sizing: border-box;
   padding-top: 50px;
-  
+
 }
 
 table tr th {
@@ -298,7 +298,7 @@ main form .form-input {
 .green-attr {
   color: #86FF83;
   /* font-weight: 900; */
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 
@@ -335,7 +335,7 @@ main #results-display .other-attributes {
 }
 
 .mission-statement pre {
-  font-size: 28px;
+  font-size: 34px;
 }
 
 .about-us {
@@ -390,12 +390,16 @@ main #results-display .other-attributes {
   background-color: #31313162;
   border: 1px solid black;
   border-radius: 8px;
-  line-height: 28px;
+  line-height: 30px;
 }
 
 /* ===================== */
 /* ABOUT US END*/
 /* ===================== */
+
+pre {
+  font-size: 1.2rem;
+}
 
 section.container {
   height: 50%;
