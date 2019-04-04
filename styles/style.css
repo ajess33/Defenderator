@@ -319,8 +319,13 @@ main #results-display .other-attributes {
 
 .mission-statement {
   margin-top: 7%;
-  margin-left: 5%;
+  margin-left: 150px;
   margin-bottom: 2%;
+  padding: 20px;
+  background-color: #3131318c;
+  border-radius: 5px;
+  width: 1550px;
+  /* margin: 0 auto; */
 }
 .mission-statement h3 {
   font-size: 32px;
