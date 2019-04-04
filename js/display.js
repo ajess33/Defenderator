@@ -110,7 +110,6 @@ function displayChart(monster) {
     monster.charisma
   ];
 
-  // var baseLabels = ['Str', 'Dex', 'Con', 'Int', 'Wis', 'Cha'];
 
   var ctx2 = document.getElementById('myChart-base');
   var myBaseChart = new Chart(ctx2, {
