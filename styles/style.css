@@ -113,7 +113,7 @@ main .form-wrapper {
   overflow: hidden;
 }
 
-main h2 {
+main .intro-header {
   color: #db001d;
   width: 730px;
   font-size: 2.5rem;
