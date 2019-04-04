@@ -42,20 +42,21 @@ table {
   margin-bottom: 0px;
   box-sizing: border-box;
   padding-top: 50px;
-  text-shadow: 4px 6px 12px rgba(145, 145, 145, 0.59);
+  
 }
 
 table tr th {
-  font-size: 120px;
+  font-size: 180px;
   text-align: center;
   padding: 5px 10px;
   font-weight: bold;
   color: #ff2d2a;
+  text-shadow: 4px 6px 12px rgba(20, 1, 1, 0.59);
 }
 
 table tr td {
   text-align: center;
-  font-size: 28px;
+  font-size: 48px;
   color: #ff2d2a;
 }
 
@@ -69,8 +70,8 @@ footer.index {
 }
 
 section.acid button {
-  margin-top: 2%;
-  margin-left: 44%;
+  margin: 2% auto;
+  display:block;
   font-size: 20px;
   background-color: #303030b0;
   color: #86ff83;
