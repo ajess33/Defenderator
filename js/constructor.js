@@ -110,17 +110,3 @@ MakeMonster.prototype.render = function () {
   this.newProficiency();
   this.newArmorClass();
 };
-
-var loadData = function() {
-  var monsterArray = Object.keys(MakeMonster.all);
-  monsterArray.forEach(function(monster){
-    addToSquad(MakeMonster.all[monster]);
-    displayChart(MakeMonster.all[monster]);
-    populateOtherStats(MakeMonster.all[monster]);
-  });
-};
-
-if(localStorage['MakeMonster.all']) {
-  MakeMonster.all = JSON.parse(localStorage['MakeMonster.all']);
-  loadData();
-}
