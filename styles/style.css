@@ -106,38 +106,55 @@ section.acid button {
 
 
 main .form-wrapper {
-  max-width: 800px;
-  margin: 80px auto 200px auto;
+  max-width: 1000px;
+  margin: 40px auto 100px auto;
   overflow: hidden;
 }
 
 main h2 {
   color: #db001d;
+  width: 730px;
   font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
-  margin-top: 70px;
+  margin: 70px auto 20px auto;
+  font-family: 'Special Elite', cursive;
 }
+
+/* input#name-select {
+  padding: 0 10px;
+  box-sizing: border-box;
+} */
+
+input#name-select:focus {
+  outline: none;
+  border: 5px solid #00FF03;
+}
+
 
 main .form-wrapper label {
   font-size: 1.5rem;
 }
 
 main .form-wrapper input {
-  margin-left: 75px;
-  height: 30px;
+  margin-left: 79px;
+  height: 35px;
   width: 200px;
   border-radius: 5px;
+  font-size: 1.2rem;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
 main .form-wrapper select {
-  height: 30px;
+  height: 35px;
   width: 200px;
   margin-left: 20px;
+  font-size: 1.1rem;
 }
 
 main #submit-form {
-  height: 30px;
+  height: 40px;
   border-radius: 5px;
   margin: 0 auto;
   text-align: center;
@@ -152,31 +169,29 @@ main #submit-form:hover {
   color: #db001d;
 }
 
-main p.form-banner {
-  color: #00FF03;
-  float: right;
-  font-size: 3rem;
-  font-weight: 900;
-  margin: 80px 200px 0 0;
+main #submit-form:focus, select:focus {
+  outline: none;
+  border: 5px solid #00FF03;
 }
 
 main .create-button, main a {
-  float: right;
   border-radius: 5px;
   background: #db001d;
   text-decoration: none;
   color: #fff;
-  margin: 0 auto;
+  margin: 80px 100px 0 auto;
   text-align: center;
   cursor: pointer;
-  margin-top: -130px;
-  margin-left: 40px;
-  padding: 15px 15px;
+  padding: 15px 25px;
+  letter-spacing: 1.2px;
+  font-weight: 900;
 }
 
-/* main a {
-  color: #fff;
-} */
+main .create-button:hover {
+  background: #fff;
+  border: 1px solid #db001d;
+  color: #db001d;
+}
 
 main input#submit-form, main p.create-button {
   background: #db001d;
@@ -187,11 +202,8 @@ main input#submit-form, main p.create-button {
 }
 
 main .display-wrapper {
-  background: #fff;
-}
-
-canvas {
-  background: #999;
+  background: rgba(56, 56, 56, 0.7);
+  padding-top: 50px;
 }
 
 main .display-wrapper .created-wrapper {
@@ -200,23 +212,32 @@ main .display-wrapper .created-wrapper {
 }
 
 main .display-wrapper .created-wrapper button {
-  /* float: right; */
+  float: right;
   margin: 0 10px;
+  padding: 5px 10px;
+  font-size: 1.1rem;
 }
 
 main .display-wrapper .created-wrapper #created-list li {
-  border: 1px solid #000;
+  border: 3px solid #fff;
   border-radius: 5px;
   padding: 20px 30px;
-  margin-top: 10px;
+  margin-top: 20px;
+  background: rgba(238, 118, 118, 0.4);
+  color: #fff;
+  /* font-size: 1rem; */
 }
 
 main .display-wrapper .created-wrapper h3 {
   color: #a30a08;
-  margin-top: 50px;
-  text-align: center;
-  padding-top: 50px;
-  font-size: 2rem;
+  font-size: 2.3rem;
+  font-family: 'Special Elite', cursive;
+  font-weight: 900;
+  width: 325px;
+  margin: 20px auto;
+  padding: 15px 25px;
+  background: #fff;
+  border-radius: 5px;
 }
 
 input:focus {
@@ -227,6 +248,8 @@ input:focus {
 main #create-enemy {
   width: 500px;
   display: inline-block;
+  padding-right: 50px;
+  border-right: 1px solid #00FF03;
 }
 
 main form label {
@@ -245,6 +268,20 @@ main form .form-input {
 .required {
   color: red;
   font-size: 1.5rem;
+}
+
+.green-attr {
+  color: #00FF03;
+  font-weight: 900;
+  font-size: 1.4rem;
+}
+
+
+main #results-display .other-attributes {
+  /* border: 1px solid #db001d; */
+  height: 300px;
+  color: #fff;
+  padding: 10px;
 }
 
 /* ===================== */

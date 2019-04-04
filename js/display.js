@@ -106,7 +106,8 @@ function displayChart(monster) {
         {
           label: 'Basic Stats',
           fill: true,
-          backgroundColor: 'rgba(219, 0, 29, 0.1)',
+          // backgroundColor: 'rgba(219, 0, 29, 0.1)',
+          backgroundColor: 'rgba(238, 118, 118, 0.4)',
           data: [
             monster.strength,
             monster.dexterity,
@@ -193,7 +194,7 @@ function populateOtherStats(monster) {
   ];
   for (var i = 0; i < otherStats.length; i++) {
     var elLi = document.createElement('li');
-    elLi.textContent = statLabels[i] + ' ' + otherStats[i];
+    elLi.innerHTML = `${statLabels[i]} <span class="green-attr">${otherStats[i]}</span>`;
     statsList.appendChild(elLi);
 
   }
@@ -207,7 +208,7 @@ function addToSquad(monster) {
   console.log(elSquadList);
 
   var newSquadMember = document.createElement('li');
-  newSquadMember.innerHTML = `${monster.name} - Adjustment: <span>${monster.increment}</span> <button class="selectMonster" data-type="show-created-stats" data-name="${monster.name}">Show Stats</button> - <button class="remove-monster" data-name="${monster.name}">X</button>`;
+  newSquadMember.innerHTML = `NAME: <span class="green-attr">${monster.name}</span> - ADJ LVL: <span class="green-attr">${monster.increment}</span> <button class="selectMonster" data-type="show-created-stats" data-name="${monster.name}">Show Stats</button><button class="remove-monster" data-name="${monster.name}">X</button>`;
   elSquadList.appendChild(newSquadMember);
 
   var elRemoveButton = document.getElementsByClassName('remove-monster');
