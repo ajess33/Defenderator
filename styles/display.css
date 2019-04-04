@@ -1,5 +1,7 @@
 main .display-wrapper {
   min-height: 70vh;
+  margin-bottom: 100px;
+  padding-bottom: 30px;
 }
 
 #myChart {
@@ -8,7 +10,7 @@ main .display-wrapper {
   color: #fff;
   font-size: 1.5rem;
   margin-left: 50px;
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
 }
 
 #myChart-base {
@@ -23,20 +25,23 @@ canvas {
 }
 
 #results-display {
-  margin: 150px 0 0 0;
+  /* margin: 150px 0 0 0; */
   padding-top: 30px;
+  margin: 150px auto 0 auto;
+  text-align: center;
 }
 
 .other-attributes {
   width: 400px;
-  padding-bottom: 200px;
   display: inline-block;
   margin-left: 30px;
+  padding-bottom: 100px;
+  text-align: left;
 }
 
 .other-attributes h4 {
   font-size: 1.3rem;
-  color: #a30a08;
+  color: #ff5d5d;
 }
 
 .other-attributes li {
