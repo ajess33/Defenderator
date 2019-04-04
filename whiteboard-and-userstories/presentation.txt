@@ -1,0 +1,57 @@
+
+!PRESENTATION LAYOUT!
+
+Welcome/Greetings
+    Group Introduction
+        we are Defenderator Development Team founded April 2 ect ect
+    Individual Introduction
+        Alexander's
+        Austins's 
+        Skylar's
+
+Share the Problem
+    There are many Dungeon Masters across the world who tire of ceaseless busy work. 
+    Making monsters, writing stats and then inevitably swapping them out for new monsters
+    or doing last minute calculations to increase their power when encounters aren't difficult enough.
+Introduce CessPit (melee edition)
+    What it is/how it solves the problem
+Walkthrough of CessPit
+    Home Page
+        nav links up top
+        quick access to the positive incremental transponder
+        Enter the Pit 
+    Create Page 
+        preloaded monsters stored in and array of objects
+        increment process
+        stat layout  
+            what each graph is and the stat block
+        save feature
+        whats this button? the create your own
+    Create your own Form
+        what it is
+            option to allow DMs to input their own campaign specific monsters
+        submit and save
+    Go back to create/increment page and show off the drop down (oh hey there are the save monsters from before)
+        see how it adds to the drop down box and allows a new kind of monster to be incremented
+    About us
+        Show our characters? i dunno may be lead into a quick transition to technical requirements
+technical talk
+    Alexander
+        Talk about properties
+        Talk about methods to get stats
+    Austin
+        talk about the stuff you did 
+        increment page ext ...
+    Skylar
+        form function
+        ext...
+Talk about challenging aspects of the projects
+    Things we learned
+    Things we that were great
+Questions
+    Hopefully the go well or are asked
+Closing Statement/Thank you for the opportunity ext
+
+dip the hell outta there
+
+
