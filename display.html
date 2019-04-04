@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="styles/display.css" />
   <!-- DOES THIS NEED TO GO ON EACH HTML PAGE? -->
   <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 </head>
 
@@ -27,13 +28,13 @@
   </header>
 
   <main>
-    <h2>Generate Monster or Create A New One</h2>
+    <h2>Generate Monster or Make Your Own</h2>
     <section class="form-wrapper">
 
       <form target="_blank" action="display.html" id="create-enemy">
         <section class="form-input">
           <label for"name-select">Enter Name:<span class="required">*</span></label>
-          <input type="text" required id="name-select">
+          <input type="text" autocomplete="off" required id="name-select">
         </section>
         <section class="form-input">
           <label for="monster-select">Pick Your Monster:</label>
@@ -72,9 +73,9 @@
         <input id="submit-form" type="submit" value="GENERATE" />
       </form>
 
-      <p class="form-banner">OR</p>
+      <!-- <p class="form-banner">OR</p> -->
 
-      <a href="create.html" class="create-button">Create Your Own!</a>
+      <a href="create.html" class="create-button">CREATE YOUR OWN</a>
     </section>
 
     <section class="display-wrapper">
