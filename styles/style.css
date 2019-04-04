@@ -353,15 +353,33 @@ main #results-display .other-attributes {
 /* ===================== */
 
 section.container {
-  height: 49vh;
+  height: 50%;
 }
 
 section.newMonster div {
   display: inline-block;
-  width: 33%;
+  width: 22.5%;
 }
 
-div label {
+div label.createInput {
+  display: block;
+  float: right;
+  clear: both;
+  color: white;
+  padding-bottom: 5px;
+  padding-top: 10px;
+  
+}
+
+div input.createInput {
+  display: block;
+  float: right;
+  clear: both;
+  width: 25%;
+  border-radius: 5px;
+}
+
+div label.textInput {
   display: block;
   float: left;
   clear: both;
@@ -370,21 +388,45 @@ div label {
   padding-top: 10px;
 }
 
-div input {
+div input.textInput {
   display: block;
   float: left;
   clear: both;
-  width: 95%;
+  width: 25%;
+  border-radius: 5px;
 }
 
 div textarea {
   display: block;
   float: left;
   clear: both;
-  width: 97.5%;
+  width: 25%;
   height: 100px;
+  margin-top: 5px;
 }
-
 section.newMonster div.notes {
   width: 100%;
+}
+
+input.createInput:focus {
+  outline: none;
+  border: 5px solid #00FF03;
+
+}
+
+textarea:focus {
+  outline: none;
+  border: 5px solid #00FF03;
+}
+
+section.createButton button {
+  margin-top: 10%;
+  margin-left: 20%;
+  font-size: 20px;
+  background-color: #303030;
+  color: #db001d;
+  border-radius: 10px;
+  padding: 10px;
+  border-color: rgb(31, 31, 31);
+  text-shadow: -4px 2px 14px rgb(0, 0, 0);
 }
