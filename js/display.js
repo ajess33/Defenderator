@@ -59,7 +59,7 @@ function displayChart(monster) {
   var healthArray = [];
   healthArray.push(healthStat);
 
-  Chart.defaults.global.defaultFontColor = '#a30a08';
+  Chart.defaults.global.defaultFontColor = '#FF5D5D';
 
   var ctx = document.getElementById('myChart');
   var myChart = new Chart(ctx, {
@@ -71,14 +71,14 @@ function displayChart(monster) {
           label: 'Total Health',
           data: [healthStat],
           borderWidth: 1,
-          backgroundColor: '#db001d'
+          backgroundColor: '#FF5D5D'
         }
       ]
     },
     options: {
       legend: {
         labels: {
-          fontSize: 130
+          fontSize: 150
         }
       },
       scales: {
@@ -86,14 +86,14 @@ function displayChart(monster) {
           {
             ticks: {
               beginAtZero: true,
-              fontSize: 80
+              fontSize: 100
             }
           }
         ],
         xAxes: [
           {
             ticks: {
-              fontSize: 80
+              fontSize: 100
             }
           }
         ]
@@ -141,24 +141,30 @@ function displayChart(monster) {
     options: {
       scale: {
         pointLabels: {
-          fontSize: 50
+          fontSize: 40,
+          // fontColor: '#00FF03'
+        },
+        angleLines: {
+          color: 'white'
+        },
+        gridLines: {
+          color: 'rgba(255, 255, 255, 0.2)'
         },
         ticks: {
           min: 0,
           max: 20,
-          stepSize: 2,
-          fontSize: 25
+          stepSize: 4,
+          fontSize: 35,
+          showLabelBackdrop: false,
+          fontColor: '#00FF03',
         }
       },
       legend: {
         labels: {
-          fontSize: 50
+          fontSize: 50,
         }
       },
       scales: {
-        gridLines: {
-          color: '#fff'
-        },
         yAxes: [
           {
             ticks: {
