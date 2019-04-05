@@ -126,7 +126,7 @@ main .form-wrapper {
 }
 
 main .intro-header {
-  color: #FF5D5D;
+  color: #FFF;
   width: 730px;
   font-size: 2.5rem;
   font-weight: bold;
@@ -319,7 +319,7 @@ main #results-display .other-attributes {
 
 .mission-statement {
   margin-top: 7%;
-  margin-left: 150px;
+  margin-left: 70px;
   margin-bottom: 2%;
   padding: 20px;
   background-color: #3131318c;
