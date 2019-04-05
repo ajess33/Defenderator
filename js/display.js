@@ -63,7 +63,6 @@ function displayChart(monster) {
   var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-      // labels: ['Health'],
       datasets: [
         {
           label: 'Total Health',
@@ -110,7 +109,6 @@ function displayChart(monster) {
         {
           label: 'Basic Stats',
           fill: true,
-          // backgroundColor: 'rgba(219, 0, 29, 0.1)',
           backgroundColor: 'rgba(238, 118, 118, 0.4)',
           data: [
             monster.strength,

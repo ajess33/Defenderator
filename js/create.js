@@ -16,8 +16,6 @@ function handleForm(e) {
   var type = e.target.type.value;
   var notes = e.target.notes.value;
 
-  console.log(notes);
-
   var monster = {
     name: name,
     strength: strength,
