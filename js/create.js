@@ -16,6 +16,8 @@ function handleForm(e) {
   var type = e.target.type.value;
   var notes = e.target.notes.value;
 
+  console.log(notes);
+
   var monster = {
     name: name,
     strength: strength,
@@ -30,7 +32,7 @@ function handleForm(e) {
     proficiency: proficiency,
     averagedamage: averagedamage,
     type: type,
-    notes: notes
+    notesAbout: notes
   };
   monsters[monster.name] = monster;
   localStorage.setItem('newMonster', JSON.stringify(monsters));
