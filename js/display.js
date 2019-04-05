@@ -1,7 +1,5 @@
 'use strict';
 
-// console.log(MakeMonster.all);
-
 var elName = document.getElementById('name-select');
 var elMonsterSelect = document.getElementById('monster-select');
 var elLevelSelect = document.getElementById('level-select');
@@ -70,7 +68,6 @@ function displayChart(monster) {
         {
           label: 'Total Health',
           data: [healthStat],
-          borderWidth: 1,
           backgroundColor: '#FF5D5D'
         }
       ]
@@ -90,13 +87,6 @@ function displayChart(monster) {
             }
           }
         ],
-        xAxes: [
-          {
-            // ticks: {
-            //   fontSize: 200
-            // }
-          }
-        ]
       }
     }
   });
@@ -133,11 +123,15 @@ function displayChart(monster) {
           borderColor: [
             'rgba(219, 0, 29, 0.2)'
           ],
-          borderWidth: 5,
+          borderWidth: 10,
         }
       ]
     },
     options: {
+      elements: {
+        hoverRadius: 10,
+        hitRadius: 10
+      },
       tooltips: {
         titleFontSize: 80,
         bodyFontSize: 60,
@@ -146,20 +140,20 @@ function displayChart(monster) {
       scale: {
         pointLabels: {
           fontSize: 50,
-          // fontColor: '#00FF03'
         },
         angleLines: {
-          color: 'white'
+          color: 'white',
+          lineWidth: '10'
         },
         gridLines: {
           color: 'rgba(255, 255, 255, 0.2)',
-          // color: '#00ff03'
+          lineWidth: '10'
         },
         ticks: {
           min: 0,
           max: 20,
           stepSize: 4,
-          fontSize: 50,
+          fontSize: 60,
           showLabelBackdrop: false,
           fontColor: '#00FF03',
         }
@@ -261,7 +255,6 @@ function removeMonster(e) {
   var removedMonster = e.target.getAttribute('data-name');
   var displaySection = document.getElementById('results-display');
   displaySection.classList.add('ghost');
-  // console.log(removedMonster);
   var elSquadList = document.getElementById('created-list');
   var elToRemove = document.querySelector(`[data-name=${removedMonster}]`);
   var listItem = elToRemove.parentNode;
@@ -269,8 +262,5 @@ function removeMonster(e) {
   delete MakeMonster.all[e.target.getAttribute('data-name')];
   localStorage.setItem('MakeMonster.all', JSON.stringify(MakeMonster.all));
 
-  // console.log(MakeMonster.all['austin']);
-
-  // console.log(MakeMonster.all[removedMonster]);
 }
 
