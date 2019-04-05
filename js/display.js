@@ -266,6 +266,8 @@ function removeMonster(e) {
   var elToRemove = document.querySelector(`[data-name=${removedMonster}]`);
   var listItem = elToRemove.parentNode;
   elSquadList.removeChild(listItem);
+  delete MakeMonster.all[e.target.getAttribute('data-name')];
+  localStorage.setItem('MakeMonster.all', JSON.stringify(MakeMonster.all));
 
   // console.log(MakeMonster.all['austin']);
 
